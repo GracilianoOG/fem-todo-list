@@ -1,3 +1,7 @@
+body {
+  color: var(--color-very-dark-grayish-blue);
+}
+
 .header {
   background-image: url("./assets/images/bg-mobile-light.jpg");
   background-position: bottom;
@@ -78,6 +82,7 @@
 .todo__entry {
   border: none;
   background-color: transparent;
+  color: var(--color-very-dark-grayish-blue);
 }
 
 .todo__entry,

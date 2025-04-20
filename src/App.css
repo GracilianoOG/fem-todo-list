@@ -37,7 +37,6 @@
 .todo {
   background-color: var(--color-very-light-gray);
   padding: 14px 20px;
-  border-radius: 6px;
   display: flex;
   align-items: center;
 }
@@ -62,4 +61,8 @@
 
 .todo__entry::placeholder {
   color: var(--color-dark-grayish-blue);
+}
+
+.round {
+  border-radius: 6px;
 }

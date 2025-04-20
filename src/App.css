@@ -59,6 +59,7 @@ body {
 .todo-list__clear {
   border: none;
   background-color: transparent;
+  min-height: 20px;
 }
 
 .todo {

@@ -1,3 +1,5 @@
+import cross from "../assets/icons/icon-cross.svg";
+
 const Todo = () => {
   return (
     <div className="todo">
@@ -7,6 +9,9 @@ const Todo = () => {
         type="text"
         placeholder="Create a new todo..."
       />
+      <button className="todo__close">
+        <img className="todo__icon" src={cross} alt="Close" />
+      </button>
     </div>
   );
 };

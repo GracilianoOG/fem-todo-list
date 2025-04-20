@@ -22,3 +22,11 @@
   --color-very-dark-grayish-blue-dark: hsl(233, 14%, 35%);
   --color-very-dark-grayish-blue-deep: hsl(237, 14%, 26%);
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

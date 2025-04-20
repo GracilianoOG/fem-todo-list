@@ -14,6 +14,10 @@ const TodoList = () => {
         <Todo text="Pickup groceries" />
         <Todo text="Complete Todo App on Frontend Mentor" />
       </ul>
+      <footer className="todo-list__footer">
+        <p className="todo-list__completed">5 items left</p>
+        <button className="todo-list__clear">Clear Completed</button>
+      </footer>
     </div>
   );
 };

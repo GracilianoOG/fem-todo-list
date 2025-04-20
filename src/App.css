@@ -42,15 +42,31 @@ body {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-.todo {
+.todo-list__footer {
   align-items: center;
   background-color: #fff;
   display: flex;
+  justify-content: space-between;
   padding: 16px 20px;
 }
 
-.todo:not(:last-of-type) {
+.todo-list__completed,
+.todo-list__clear {
+  color: var(--color-dark-grayish-blue);
+  font-size: 12px;
+}
+
+.todo-list__clear {
+  border: none;
+  background-color: transparent;
+}
+
+.todo {
+  align-items: center;
   border-bottom: 1px solid var(--color-very-light-grayish-blue);
+  background-color: #fff;
+  display: flex;
+  padding: 16px 20px;
 }
 
 .todo__btn {

@@ -1,10 +1,24 @@
 import "./App.css";
+import moon from "./assets/icons/icon-moon.svg";
 
 const App = () => {
   return (
-    <>
-      <div>hello world</div>
-    </>
+    <header className="header">
+      <div className="header__content">
+        <h1 className="header__title">Todo</h1>
+        <button className="theme-switcher">
+          <img className="theme-switcher__icon" src={moon} alt="" />
+        </button>
+      </div>
+      <div className="todo">
+        <button className="todo__btn"></button>
+        <input
+          className="todo__entry"
+          type="text"
+          placeholder="Create a new todo..."
+        />
+      </div>
+    </header>
   );
 };
 

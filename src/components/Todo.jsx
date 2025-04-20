@@ -1,14 +1,10 @@
 import cross from "../assets/icons/icon-cross.svg";
 
-const Todo = () => {
+const Todo = ({ text }) => {
   return (
     <div className="todo">
       <button className="todo__btn"></button>
-      <input
-        className="todo__entry"
-        type="text"
-        placeholder="Create a new todo..."
-      />
+      <p className="todo__text">{text}</p>
       <button className="todo__close">
         <img className="todo__icon" src={cross} alt="Close" />
       </button>

@@ -70,6 +70,10 @@
 .todo__entry {
   border: none;
   background-color: transparent;
+}
+
+.todo__entry,
+.todo__text {
   flex: 1;
   font-size: 12px;
 }

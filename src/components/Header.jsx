@@ -9,7 +9,7 @@ const Header = () => {
           <img className="theme-switcher__icon" src={moon} alt="" />
         </button>
       </div>
-      <div className="todo round">
+      <div className="box round">
         <button className="todo__btn"></button>
         <input
           className="todo__entry"

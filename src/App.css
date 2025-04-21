@@ -40,6 +40,8 @@ body {
 
 .todo-list {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  margin: -27px 25px 16px;
+  overflow: hidden;
 }
 
 .todo-list__footer {
@@ -110,6 +112,24 @@ body {
 
 .todo__entry::placeholder {
   color: var(--color-dark-grayish-blue);
+}
+
+.todo-panel {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 25px;
+}
+
+.todo-panel__btn {
+  border: none;
+  background-color: transparent;
+  color: var(--color-dark-grayish-blue);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .round {

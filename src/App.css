@@ -17,12 +17,10 @@ body {
   background-image: url("./assets/images/bg-mobile-light.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
-  min-height: 170px;
-
-  display: flex;
-  flex: 1;
   flex-direction: column;
+  min-height: 170px;
   padding: 16px 25px;
 }
 

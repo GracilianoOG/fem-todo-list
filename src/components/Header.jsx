@@ -1,4 +1,5 @@
 import moon from "../assets/icons/icon-moon.svg";
+import TodoEntry from "./TodoEntry";
 
 const Header = () => {
   return (
@@ -9,14 +10,7 @@ const Header = () => {
           <img className="theme-switcher__icon" src={moon} alt="" />
         </button>
       </div>
-      <div className="todo-entry box round">
-        <button className="todo__btn"></button>
-        <input
-          className="todo-entry__input"
-          type="text"
-          placeholder="Create a new todo..."
-        />
-      </div>
+      <TodoEntry />
     </header>
   );
 };

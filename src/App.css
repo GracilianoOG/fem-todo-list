@@ -105,6 +105,10 @@ body {
   width: var(--btn-size);
 }
 
+.todo-entry {
+  padding: 14px 20px;
+}
+
 .todo-entry__input {
   border: none;
   background-color: transparent;

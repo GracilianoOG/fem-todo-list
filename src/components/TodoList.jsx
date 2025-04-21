@@ -2,10 +2,7 @@ import Todo from "./Todo";
 
 const TodoList = () => {
   return (
-    <div
-      className="todo-list round"
-      style={{ margin: "-27px 25px 0", overflow: "hidden" }}
-    >
+    <div className="todo-list round">
       <ul>
         <Todo text="Complete online JavaScript course" />
         <Todo text="Jog around the park 3x" />

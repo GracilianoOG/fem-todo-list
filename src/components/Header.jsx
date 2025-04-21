@@ -9,10 +9,10 @@ const Header = () => {
           <img className="theme-switcher__icon" src={moon} alt="" />
         </button>
       </div>
-      <div className="box round">
+      <div className="todo-entry box round">
         <button className="todo__btn"></button>
         <input
-          className="todo__entry"
+          className="todo-entry__input"
           type="text"
           placeholder="Create a new todo..."
         />

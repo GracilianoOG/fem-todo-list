@@ -105,19 +105,19 @@ body {
   width: var(--btn-size);
 }
 
-.todo__entry {
+.todo-entry__input {
   border: none;
   background-color: transparent;
   color: var(--color-very-dark-grayish-blue);
 }
 
-.todo__entry,
+.todo-entry__input,
 .todo__text {
   flex: 1;
   font-size: 12px;
 }
 
-.todo__entry::placeholder {
+.todo-entry__input::placeholder {
   color: var(--color-dark-grayish-blue);
 }
 

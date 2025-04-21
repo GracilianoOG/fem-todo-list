@@ -7,6 +7,11 @@ const App = () => {
     <>
       <Header />
       <TodoList />
+      <div className="todo-panel todo round">
+        <button className="todo-panel__btn">All</button>
+        <button className="todo-panel__btn">Active</button>
+        <button className="todo-panel__btn">Completed</button>
+      </div>
     </>
   );
 };

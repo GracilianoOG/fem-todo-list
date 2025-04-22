@@ -20,6 +20,16 @@
   background-origin: border-box;
 }
 
+.todo__btn--selected {
+  background-clip: content-box, border-box;
+  border-color: transparent;
+  background-origin: border-box;
+  background-image: url("../assets/icons/icon-check.svg"),
+    var(--color-check-background);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .todo__icon {
   cursor: pointer;
   display: block;

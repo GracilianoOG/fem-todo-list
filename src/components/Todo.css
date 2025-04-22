@@ -15,21 +15,21 @@
 
 .todo__btn:hover {
   background-image: linear-gradient(#fff, #fff), var(--color-check-background);
-  background-clip: content-box, border-box;
-  border-color: transparent;
-  background-origin: border-box;
 }
 
 .todo__btn--selected {
-  background-clip: content-box, border-box;
-  border-color: transparent;
-  background-origin: border-box;
-  background-image: url("../assets/icons/icon-check.svg"),
-    var(--color-check-background);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.todo__btn:hover,
+.todo__btn--selected {
+  background-clip: content-box, border-box;
+  border-color: transparent;
+  background-origin: border-box;
+}
+
+.todo__btn--selected,
 .todo__btn--selected:hover {
   background-image: url("../assets/icons/icon-check.svg"),
     var(--color-check-background);

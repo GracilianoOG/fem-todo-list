@@ -30,6 +30,11 @@
   background-position: center;
 }
 
+.todo__text--completed {
+  color: var(--color-light-grayish-blue);
+  text-decoration: line-through;
+}
+
 .todo__icon {
   cursor: pointer;
   display: block;

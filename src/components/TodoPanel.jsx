@@ -1,3 +1,5 @@
+import "./TodoPanel.css";
+
 const TodoPanel = () => {
   return (
     <div className="todo-panel box round">

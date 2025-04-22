@@ -1,0 +1,20 @@
+.todo-panel {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  bottom: -62px;
+}
+
+.todo-panel__btn {
+  border: none;
+  background-color: transparent;
+  color: var(--color-dark-grayish-blue);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}

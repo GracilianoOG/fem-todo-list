@@ -21,3 +21,20 @@
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+
+@media screen and (min-width: 768px) {
+  .header {
+    background-image: url("../assets/images/bg-desktop-light.jpg");
+    min-height: 300px;
+    padding-top: 76px;
+  }
+
+  .header__content {
+    margin-bottom: 40px;
+  }
+
+  .header__title {
+    font-size: 36px;
+    letter-spacing: 18px;
+  }
+}

@@ -1,4 +1,5 @@
 import cross from "../assets/icons/icon-cross.svg";
+import "./Todo.css";
 
 const Todo = ({ text }) => {
   return (

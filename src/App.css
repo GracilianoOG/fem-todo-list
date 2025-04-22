@@ -22,36 +22,6 @@ body {
   width: 20px;
 }
 
-.todo {
-  border-bottom: 1px solid var(--color-very-light-grayish-blue);
-}
-
-.todo__btn {
-  --btn-size: 20px;
-  border-radius: 50%;
-  border: 1px solid var(--color-very-light-grayish-blue);
-  background-color: transparent;
-  cursor: pointer;
-  height: var(--btn-size);
-  margin-right: 10px;
-  width: var(--btn-size);
-}
-
-.todo__icon {
-  cursor: pointer;
-  display: block;
-  width: 100%;
-}
-
-.todo__close {
-  --btn-size: 12px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  height: var(--btn-size);
-  width: var(--btn-size);
-}
-
 .todo-entry {
   background-color: #fff;
   padding: 14px 20px;

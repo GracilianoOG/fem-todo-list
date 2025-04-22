@@ -1,5 +1,6 @@
 import moon from "../assets/icons/icon-moon.svg";
 import TodoEntry from "./TodoEntry";
+import "./Header.css";
 
 const Header = () => {
   return (

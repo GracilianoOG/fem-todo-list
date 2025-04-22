@@ -12,30 +12,6 @@ body {
   border-radius: 6px;
 }
 
-.header {
-  background-image: url("./assets/images/bg-mobile-light.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  min-height: 170px;
-  padding: 16px 0;
-}
-
-.header__content {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.header__title {
-  color: var(--color-very-light-gray);
-  font-size: 27px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-}
-
 .theme-switcher {
   border: none;
   background-color: transparent;

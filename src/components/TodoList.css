@@ -1,0 +1,26 @@
+.todo-list {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: -27px auto 16px;
+  z-index: 999;
+}
+
+.todo-list__footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  position: relative;
+}
+
+.todo-list__completed,
+.todo-list__clear {
+  color: var(--color-dark-grayish-blue);
+  font-size: 12px;
+}
+
+.todo-list__clear {
+  border: none;
+  background-color: transparent;
+  min-height: 20px;
+}

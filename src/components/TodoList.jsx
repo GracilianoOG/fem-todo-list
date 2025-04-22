@@ -1,5 +1,6 @@
 import Todo from "./Todo";
 import TodoPanel from "./TodoPanel";
+import "./TodoList.css";
 
 const TodoList = () => {
   return (

@@ -13,6 +13,13 @@
   width: var(--btn-size);
 }
 
+.todo__btn:hover {
+  background-image: linear-gradient(#fff, #fff), var(--color-check-background);
+  background-clip: content-box, border-box;
+  border-color: transparent;
+  background-origin: border-box;
+}
+
 .todo__icon {
   cursor: pointer;
   display: block;

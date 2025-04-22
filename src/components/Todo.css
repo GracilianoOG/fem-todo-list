@@ -30,6 +30,11 @@
   background-position: center;
 }
 
+.todo__btn--selected:hover {
+  background-image: url("../assets/icons/icon-check.svg"),
+    var(--color-check-background);
+}
+
 .todo__text--completed {
   color: var(--color-light-grayish-blue);
   text-decoration: line-through;

@@ -33,4 +33,8 @@
     --btn-size: 24px;
     margin-right: 24px;
   }
+
+  .todo__text {
+    font-size: 17.6px;
+  }
 }

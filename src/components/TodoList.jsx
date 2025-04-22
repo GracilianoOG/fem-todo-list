@@ -3,7 +3,7 @@ import TodoPanel from "./TodoPanel";
 
 const TodoList = () => {
   return (
-    <div className="todo-list round">
+    <div className="todo-list container round">
       <ul>
         <Todo text="Complete online JavaScript course" />
         <Todo text="Jog around the park 3x" />

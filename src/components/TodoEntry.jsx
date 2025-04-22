@@ -1,3 +1,5 @@
+import "./TodoEntry.css";
+
 const TodoEntry = () => {
   return (
     <div className="todo-entry box round">

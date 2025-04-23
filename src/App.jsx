@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
+import TodoContext from "./context/TodoContext";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -18,10 +19,16 @@ const App = () => {
   };
 
   return (
-    <>
-      <Header addTodo={addTodo} />
-      <TodoList todos={todos} />
-    </>
+    <TodoContext.Provider
+      value={{
+        todos,
+        setTodos,
+        addTodo,
+      }}
+    >
+      <Header />
+      <TodoList />
+    </TodoContext.Provider>
   );
 };
 

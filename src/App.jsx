@@ -13,9 +13,13 @@ const App = () => {
     { task: "Complete Todo App on Frontend Mentor" },
   ]);
 
+  const addTodo = task => {
+    setTodos([...todos, { task }]);
+  };
+
   return (
     <>
-      <Header />
+      <Header addTodo={addTodo} />
       <TodoList todos={todos} />
     </>
   );

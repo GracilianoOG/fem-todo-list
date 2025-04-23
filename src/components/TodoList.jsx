@@ -1,18 +1,8 @@
 import Todo from "./Todo";
 import TodoPanel from "./TodoPanel";
 import "./TodoList.css";
-import { useState } from "react";
 
-const TodoList = () => {
-  const [todos, setTodos] = useState([
-    { task: "Complete online JavaScript course" },
-    { task: "Jog around the park 3x" },
-    { task: "10 minutes meditation" },
-    { task: "Read for 1 hour" },
-    { task: "Pick up groceries" },
-    { task: "Complete Todo App on Frontend Mentor" },
-  ]);
-
+const TodoList = ({ todos }) => {
   return (
     <div className="todo-list container round">
       <ul>

@@ -1,8 +1,12 @@
 import Todo from "./Todo";
 import TodoPanel from "./TodoPanel";
 import "./TodoList.css";
+import { useContext } from "react";
+import TodoContext from "../context/TodoContext";
 
-const TodoList = ({ todos }) => {
+const TodoList = () => {
+  const { todos } = useContext(TodoContext);
+
   return (
     <div className="todo-list container round">
       <ul>

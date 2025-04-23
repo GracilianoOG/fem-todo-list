@@ -2,7 +2,7 @@ import { useState } from "react";
 import cross from "../assets/icons/icon-cross.svg";
 import "./Todo.css";
 
-const Todo = ({ text }) => {
+const Todo = ({ task }) => {
   const [isCompleted, setIsCompleted] = useState(false);
 
   const handleMarkClick = () => {
@@ -18,7 +18,7 @@ const Todo = ({ text }) => {
       <p
         className={`todo__text ${!isCompleted ? "" : "todo__text--completed"}`}
       >
-        {text}
+        {task}
       </p>
       <button className="todo__close">
         <img className="todo__icon" src={cross} alt="Close" />

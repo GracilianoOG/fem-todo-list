@@ -2,7 +2,7 @@ import moon from "../assets/icons/icon-moon.svg";
 import TodoEntry from "./TodoEntry";
 import "./Header.css";
 
-const Header = ({ addTodo }) => {
+const Header = () => {
   return (
     <header className="header">
       <div className="container">
@@ -12,7 +12,7 @@ const Header = ({ addTodo }) => {
             <img className="theme-switcher__icon" src={moon} alt="" />
           </button>
         </div>
-        <TodoEntry addTodo={addTodo} />
+        <TodoEntry />
       </div>
     </header>
   );

@@ -6,9 +6,14 @@ const TodoEntry = () => {
   const [task, setTask] = useState("");
   const { addTodo } = useContext(TodoContext);
 
+  const handleClick = () => {
+    addTodo(task);
+    setTask("");
+  };
+
   return (
     <div className="todo-entry box round">
-      <button className="todo__btn" onClick={() => addTodo(task)}></button>
+      <button className="todo__btn" onClick={handleClick}></button>
       <input
         className="todo-entry__input"
         type="text"

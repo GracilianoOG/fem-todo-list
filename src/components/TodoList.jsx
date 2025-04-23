@@ -1,17 +1,24 @@
 import Todo from "./Todo";
 import TodoPanel from "./TodoPanel";
 import "./TodoList.css";
+import { useState } from "react";
 
 const TodoList = () => {
+  const [todos, setTodos] = useState([
+    { task: "Complete online JavaScript course" },
+    { task: "Jog around the park 3x" },
+    { task: "10 minutes meditation" },
+    { task: "Read for 1 hour" },
+    { task: "Pick up groceries" },
+    { task: "Complete Todo App on Frontend Mentor" },
+  ]);
+
   return (
     <div className="todo-list container round">
       <ul>
-        <Todo text="Complete online JavaScript course" />
-        <Todo text="Jog around the park 3x" />
-        <Todo text="10 minutes meditation" />
-        <Todo text="Read for 1 hour" />
-        <Todo text="Pickup groceries" />
-        <Todo text="Complete Todo App on Frontend Mentor" />
+        {todos.map((todo, index) => (
+          <Todo key={index} task={todo.task} />
+        ))}
       </ul>
       <footer className="todo-list__footer">
         <p className="todo-list__completed">5 items left</p>

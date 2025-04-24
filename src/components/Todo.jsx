@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import cross from "../assets/icons/icon-cross.svg";
-import "./Todo.css";
 import TodoContext from "../context/TodoContext";
 import { ButtonStyled } from "./styles/ButtonStyled";
 import {

@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import cross from "../assets/icons/icon-cross.svg";
 import "./Todo.css";
+import TodoContext from "../context/TodoContext";
 
-const Todo = ({ task }) => {
+const Todo = ({ id, task }) => {
   const [isCompleted, setIsCompleted] = useState(false);
+  const { deleteTodo } = useContext(TodoContext);
 
   const handleMarkClick = () => {
     setIsCompleted(prevSelected => !prevSelected);
@@ -20,7 +22,7 @@ const Todo = ({ task }) => {
       >
         {task}
       </p>
-      <button className="todo__close">
+      <button className="todo__close" onClick={() => deleteTodo(id)}>
         <img className="todo__icon" src={cross} alt="Close" />
       </button>
     </li>

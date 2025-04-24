@@ -5,7 +5,7 @@ import { useContext } from "react";
 import TodoContext from "../context/TodoContext";
 
 const TodoList = () => {
-  const { todos, setTodos } = useContext(TodoContext);
+  const { todos, setTodos, getTodos, filter } = useContext(TodoContext);
 
   const getTodosLeft = () => todos.filter(todo => !todo.isCompleted).length;
 
@@ -15,7 +15,7 @@ const TodoList = () => {
   return (
     <div className="todo-list container round">
       <ul>
-        {todos.map((todo, index) => (
+        {getTodos(filter).map((todo, index) => (
           <Todo
             id={todo.id}
             key={index}

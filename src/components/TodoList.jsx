@@ -5,12 +5,11 @@ import { useContext } from "react";
 import TodoContext from "../context/TodoContext";
 
 const TodoList = () => {
-  const { todos, setTodos, getTodos, filter } = useContext(TodoContext);
+  const { setTodos, getTodos, filter } = useContext(TodoContext);
 
-  const getTodosLeft = () => todos.filter(todo => !todo.isCompleted).length;
+  const getTodosLeft = () => getTodos("ACTIVE").length;
 
-  const clearCompleted = () =>
-    setTodos(todos.filter(todo => !todo.isCompleted));
+  const clearCompleted = () => setTodos(getTodos("ACTIVE"));
 
   return (
     <div className="todo-list container round">

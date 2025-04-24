@@ -46,6 +46,18 @@ const App = () => {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
+  const completeTodo = id => {
+    setTodos(
+      todos.map(todo => {
+        if (todo.id === id) {
+          todo.isCompleted = !todo.isCompleted;
+          return todo;
+        }
+        return todo;
+      })
+    );
+  };
+
   return (
     <TodoContext.Provider
       value={{
@@ -53,6 +65,7 @@ const App = () => {
         setTodos,
         addTodo,
         deleteTodo,
+        completeTodo,
       }}
     >
       <Header />

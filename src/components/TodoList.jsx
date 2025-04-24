@@ -7,6 +7,8 @@ import TodoContext from "../context/TodoContext";
 const TodoList = () => {
   const { todos } = useContext(TodoContext);
 
+  const getTodosLeft = () => todos.filter(todo => !todo.isCompleted).length;
+
   return (
     <div className="todo-list container round">
       <ul>
@@ -20,7 +22,7 @@ const TodoList = () => {
         ))}
       </ul>
       <footer className="todo-list__footer">
-        <p className="todo-list__completed">5 items left</p>
+        <p className="todo-list__completed">{getTodosLeft()} items left</p>
         <TodoPanel />
         <button className="todo-list__clear">Clear Completed</button>
       </footer>

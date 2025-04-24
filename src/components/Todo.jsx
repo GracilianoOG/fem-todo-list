@@ -3,6 +3,12 @@ import cross from "../assets/icons/icon-cross.svg";
 import "./Todo.css";
 import TodoContext from "../context/TodoContext";
 import { ButtonStyled } from "./styles/ButtonStyled";
+import {
+  TodoDeleteIconStyled,
+  TodoDeleteStyled,
+  TodoStyled,
+  TodoTextStyled,
+} from "./styles/TodoStyled";
 
 const Todo = ({ id, task, isCompleted }) => {
   const { deleteTodo, completeTodo } = useContext(TodoContext);
@@ -11,18 +17,16 @@ const Todo = ({ id, task, isCompleted }) => {
   const handleDeleteClick = () => deleteTodo(id);
 
   return (
-    <li className="todo box">
+    <TodoStyled className="todo box">
       <ButtonStyled
         $selected={isCompleted}
         onClick={handleCompleteClick}
       ></ButtonStyled>
-      <p className={`todo__text ${isCompleted && "todo__text--completed"}`}>
-        {task}
-      </p>
-      <button className="todo__close" onClick={handleDeleteClick}>
-        <img className="todo__icon" src={cross} alt="Delete task" />
-      </button>
-    </li>
+      <TodoTextStyled $crossed={isCompleted}>{task}</TodoTextStyled>
+      <TodoDeleteStyled onClick={handleDeleteClick}>
+        <TodoDeleteIconStyled src={cross} alt="Delete task" />
+      </TodoDeleteStyled>
+    </TodoStyled>
   );
 };
 

@@ -1,4 +1,3 @@
-import "./TodoPanel.css";
 import FilterButton from "./FilterButton";
 import { TodoPanelStyled } from "./styles/TodoPanelStyled";
 

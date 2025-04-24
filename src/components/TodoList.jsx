@@ -5,9 +5,12 @@ import { useContext } from "react";
 import TodoContext from "../context/TodoContext";
 
 const TodoList = () => {
-  const { todos } = useContext(TodoContext);
+  const { todos, setTodos } = useContext(TodoContext);
 
   const getTodosLeft = () => todos.filter(todo => !todo.isCompleted).length;
+
+  const clearCompleted = () =>
+    setTodos(todos.filter(todo => !todo.isCompleted));
 
   return (
     <div className="todo-list container round">
@@ -24,7 +27,9 @@ const TodoList = () => {
       <footer className="todo-list__footer">
         <p className="todo-list__completed">{getTodosLeft()} items left</p>
         <TodoPanel />
-        <button className="todo-list__clear">Clear Completed</button>
+        <button className="todo-list__clear" onClick={clearCompleted}>
+          Clear Completed
+        </button>
       </footer>
     </div>
   );

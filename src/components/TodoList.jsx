@@ -1,18 +1,22 @@
 import Todo from "./Todo";
 import TodoPanel from "./TodoPanel";
-import "./TodoList.css";
 import { useContext } from "react";
 import TodoContext from "../context/TodoContext";
+import {
+  TodoListClearStyled,
+  TodoListFooterStyled,
+  TodoListLeftStyled,
+  TodoListStyled,
+} from "./styles/TodoListStyled";
 
 const TodoList = () => {
   const { setTodos, getTodos, filter } = useContext(TodoContext);
 
   const getTodosLeft = () => getTodos("ACTIVE").length;
-
   const clearCompleted = () => setTodos(getTodos("ACTIVE"));
 
   return (
-    <div className="todo-list container round">
+    <TodoListStyled className="container round">
       <ul>
         {getTodos(filter).map((todo, index) => (
           <Todo
@@ -23,14 +27,14 @@ const TodoList = () => {
           />
         ))}
       </ul>
-      <footer className="todo-list__footer">
-        <p className="todo-list__completed">{getTodosLeft()} items left</p>
+      <TodoListFooterStyled>
+        <TodoListLeftStyled>{getTodosLeft()} items left</TodoListLeftStyled>
         <TodoPanel />
-        <button className="todo-list__clear" onClick={clearCompleted}>
+        <TodoListClearStyled onClick={clearCompleted}>
           Clear Completed
-        </button>
-      </footer>
-    </div>
+        </TodoListClearStyled>
+      </TodoListFooterStyled>
+    </TodoListStyled>
   );
 };
 

@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import "./TodoEntry.css";
 import TodoContext from "../context/TodoContext";
 import {
   TodoEntryInputStyled,

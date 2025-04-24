@@ -6,23 +6,20 @@ import TodoContext from "../context/TodoContext";
 const Todo = ({ id, task, isCompleted }) => {
   const { deleteTodo, completeTodo } = useContext(TodoContext);
 
-  const handleMarkClick = () => {
-    completeTodo(id);
-  };
+  const handleCompleteClick = () => completeTodo(id);
+  const handleDeleteClick = () => deleteTodo(id);
 
   return (
     <li className="todo box">
       <button
-        className={`todo__btn ${!isCompleted ? "" : "todo__btn--selected"}`}
-        onClick={handleMarkClick}
+        className={`todo__btn ${isCompleted && "todo__btn--selected"}`}
+        onClick={handleCompleteClick}
       ></button>
-      <p
-        className={`todo__text ${!isCompleted ? "" : "todo__text--completed"}`}
-      >
+      <p className={`todo__text ${isCompleted && "todo__text--completed"}`}>
         {task}
       </p>
-      <button className="todo__close" onClick={() => deleteTodo(id)}>
-        <img className="todo__icon" src={cross} alt="Close" />
+      <button className="todo__close" onClick={handleDeleteClick}>
+        <img className="todo__icon" src={cross} alt="Delete task" />
       </button>
     </li>
   );

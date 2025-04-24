@@ -1,4 +1,6 @@
-.todo-panel {
+import styled from "styled-components";
+
+export const TodoPanelStyled = styled.div`
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -8,23 +10,8 @@
   position: absolute;
   width: 100%;
   bottom: -62px;
-}
 
-.todo-panel__btn {
-  border: none;
-  background-color: transparent;
-  color: var(--color-dark-grayish-blue);
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.todo-panel__btn--selected {
-  color: var(--color-bright-blue);
-}
-
-@media screen and (min-width: 768px) {
-  .todo-panel {
+  @media screen and (min-width: 768px) {
     box-shadow: none;
     bottom: initial;
     left: 50%;
@@ -32,4 +19,4 @@
     transform: translateX(-50%);
     width: auto;
   }
-}
+`;

@@ -38,12 +38,24 @@ const App = () => {
     },
   ]);
 
+  const [filter, setFilter] = useState("ALL");
+
   const addTodo = task => {
     setTodos([...todos, { id: self.crypto.randomUUID(), task }]);
   };
 
   const deleteTodo = id => {
     setTodos(todos.filter(todo => todo.id !== id));
+  };
+
+  const getTodos = (status = "ALL") => {
+    if (status === "ALL") {
+      return todos;
+    } else if (status === "COMPLETED") {
+      return todos.filter(todo => todo.isCompleted);
+    } else if (status === "ACTIVE") {
+      return todos.filter(todo => !todo.isCompleted);
+    }
   };
 
   const completeTodo = id => {
@@ -66,6 +78,9 @@ const App = () => {
         addTodo,
         deleteTodo,
         completeTodo,
+        getTodos,
+        filter,
+        setFilter,
       }}
     >
       <Header />

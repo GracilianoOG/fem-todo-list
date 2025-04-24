@@ -11,7 +11,7 @@ const TodoList = () => {
     <div className="todo-list container round">
       <ul>
         {todos.map((todo, index) => (
-          <Todo key={index} task={todo.task} />
+          <Todo id={todo.id} key={index} task={todo.task} />
         ))}
       </ul>
       <footer className="todo-list__footer">

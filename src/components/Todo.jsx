@@ -3,12 +3,13 @@ import cross from "../assets/icons/icon-cross.svg";
 import "./Todo.css";
 import TodoContext from "../context/TodoContext";
 
-const Todo = ({ id, task }) => {
-  const [isCompleted, setIsCompleted] = useState(false);
-  const { deleteTodo } = useContext(TodoContext);
+const Todo = ({ id, task, isCompleted: status }) => {
+  const [isCompleted, setIsCompleted] = useState(status);
+  const { deleteTodo, completeTodo } = useContext(TodoContext);
 
   const handleMarkClick = () => {
     setIsCompleted(prevSelected => !prevSelected);
+    completeTodo(id);
   };
 
   return (

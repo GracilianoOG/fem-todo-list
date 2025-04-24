@@ -73,7 +73,6 @@ const App = () => {
   return (
     <TodoContext.Provider
       value={{
-        todos,
         setTodos,
         addTodo,
         deleteTodo,

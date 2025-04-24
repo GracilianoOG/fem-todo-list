@@ -1,20 +1,24 @@
 import moon from "../assets/icons/icon-moon.svg";
+import {
+  HeaderContentStyled,
+  HeaderStyled,
+  HeaderTitleStyled,
+} from "./styles/HeaderStyled";
 import TodoEntry from "./TodoEntry";
-import "./Header.css";
 
 const Header = () => {
   return (
-    <header className="header">
+    <HeaderStyled>
       <div className="container">
-        <div className="header__content">
-          <h1 className="header__title">Todo</h1>
+        <HeaderContentStyled>
+          <HeaderTitleStyled>Todo</HeaderTitleStyled>
           <button className="theme-switcher">
             <img className="theme-switcher__icon" src={moon} alt="" />
           </button>
-        </div>
+        </HeaderContentStyled>
         <TodoEntry />
       </div>
-    </header>
+    </HeaderStyled>
   );
 };
 

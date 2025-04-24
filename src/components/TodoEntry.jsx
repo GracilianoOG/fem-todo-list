@@ -1,6 +1,10 @@
 import { useContext, useState } from "react";
 import "./TodoEntry.css";
 import TodoContext from "../context/TodoContext";
+import {
+  TodoEntryInputStyled,
+  TodoEntryStyled,
+} from "./styles/TodoEntryStyled";
 
 const TodoEntry = () => {
   const [task, setTask] = useState("");
@@ -12,16 +16,15 @@ const TodoEntry = () => {
   };
 
   return (
-    <div className="todo-entry box round">
+    <TodoEntryStyled className="box round">
       <button className="todo__btn" onClick={handleClick}></button>
-      <input
-        className="todo-entry__input"
+      <TodoEntryInputStyled
         type="text"
         placeholder="Create a new todo..."
         value={task}
         onChange={e => setTask(e.target.value)}
       />
-    </div>
+    </TodoEntryStyled>
   );
 };
 

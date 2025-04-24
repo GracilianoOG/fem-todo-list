@@ -35,6 +35,11 @@
     var(--color-check-background);
 }
 
+.todo__text {
+  flex: 1;
+  font-size: 12px;
+}
+
 .todo__text--completed {
   color: var(--color-light-grayish-blue);
   text-decoration: line-through;

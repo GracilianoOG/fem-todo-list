@@ -4,6 +4,7 @@ import {
   TodoEntryInputStyled,
   TodoEntryStyled,
 } from "./styles/TodoEntryStyled";
+import { ButtonStyled } from "./styles/ButtonStyled";
 
 const TodoEntry = () => {
   const [task, setTask] = useState("");
@@ -16,7 +17,7 @@ const TodoEntry = () => {
 
   return (
     <TodoEntryStyled className="box round">
-      <button className="todo__btn" onClick={handleClick}></button>
+      <ButtonStyled onClick={handleClick}></ButtonStyled>
       <TodoEntryInputStyled
         type="text"
         placeholder="Create a new todo..."

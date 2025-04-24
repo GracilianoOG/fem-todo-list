@@ -2,6 +2,7 @@ import { useContext } from "react";
 import cross from "../assets/icons/icon-cross.svg";
 import "./Todo.css";
 import TodoContext from "../context/TodoContext";
+import { ButtonStyled } from "./styles/ButtonStyled";
 
 const Todo = ({ id, task, isCompleted }) => {
   const { deleteTodo, completeTodo } = useContext(TodoContext);
@@ -11,10 +12,10 @@ const Todo = ({ id, task, isCompleted }) => {
 
   return (
     <li className="todo box">
-      <button
-        className={`todo__btn ${isCompleted && "todo__btn--selected"}`}
+      <ButtonStyled
+        $selected={isCompleted}
         onClick={handleCompleteClick}
-      ></button>
+      ></ButtonStyled>
       <p className={`todo__text ${isCompleted && "todo__text--completed"}`}>
         {task}
       </p>

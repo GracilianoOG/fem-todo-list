@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
 import TodoContext from "./context/TodoContext";
+import { GlobalStyled } from "./components/styles/GlobalStyled";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -82,6 +83,7 @@ const App = () => {
         setFilter,
       }}
     >
+      <GlobalStyled />
       <Header />
       <TodoList />
     </TodoContext.Provider>

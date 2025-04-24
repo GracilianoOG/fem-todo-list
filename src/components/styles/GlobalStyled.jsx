@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyled = createGlobalStyle`
 :root {
   /* Primary Colors */
   --color-bright-blue: hsl(220, 98%, 61%);
@@ -32,3 +35,41 @@
   padding: 0;
   font-family: "Josefin Sans", sans-serif;
 }
+
+body {
+  background-color: var(--color-very-light-gray);
+  color: var(--color-very-dark-grayish-blue);
+}
+
+.box {
+  align-items: center;
+  display: flex;
+  padding: 16px 20px;
+}
+
+.round {
+  border-radius: 6px;
+}
+
+.theme-switcher {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.theme-switcher__icon {
+  width: 20px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: min(88%, 540px);
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    padding: 20px 24px;
+  }
+}
+`;

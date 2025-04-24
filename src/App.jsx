@@ -21,12 +21,17 @@ const App = () => {
     setTodos([...todos, { id: self.crypto.randomUUID(), task }]);
   };
 
+  const deleteTodo = id => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
+
   return (
     <TodoContext.Provider
       value={{
         todos,
         setTodos,
         addTodo,
+        deleteTodo,
       }}
     >
       <Header />

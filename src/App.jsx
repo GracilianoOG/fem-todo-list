@@ -6,14 +6,35 @@ import TodoContext from "./context/TodoContext";
 
 const App = () => {
   const [todos, setTodos] = useState([
-    { id: self.crypto.randomUUID(), task: "Complete online JavaScript course" },
-    { id: self.crypto.randomUUID(), task: "Jog around the park 3x" },
-    { id: self.crypto.randomUUID(), task: "10 minutes meditation" },
-    { id: self.crypto.randomUUID(), task: "Read for 1 hour" },
-    { id: self.crypto.randomUUID(), task: "Pick up groceries" },
+    {
+      id: self.crypto.randomUUID(),
+      task: "Complete online JavaScript course",
+      isCompleted: true,
+    },
+    {
+      id: self.crypto.randomUUID(),
+      task: "Jog around the park 3x",
+      isCompleted: false,
+    },
+    {
+      id: self.crypto.randomUUID(),
+      task: "10 minutes meditation",
+      isCompleted: false,
+    },
+    {
+      id: self.crypto.randomUUID(),
+      task: "Read for 1 hour",
+      isCompleted: false,
+    },
+    {
+      id: self.crypto.randomUUID(),
+      task: "Pick up groceries",
+      isCompleted: false,
+    },
     {
       id: self.crypto.randomUUID(),
       task: "Complete Todo App on Frontend Mentor",
+      isCompleted: false,
     },
   ]);
 

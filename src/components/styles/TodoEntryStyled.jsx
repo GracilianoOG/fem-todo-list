@@ -12,12 +12,12 @@ export const TodoEntryStyled = styled.div`
 export const TodoEntryInputStyled = styled.input`
   border: none;
   background-color: transparent;
-  color: var(--color-very-dark-grayish-blue);
+  color: ${({ theme }) => theme.colors.input};
   flex: 1;
   font-size: 12px;
 
   &::placeholder {
-    color: var(--color-dark-grayish-blue);
+    color: ${({ theme }) => theme.colors.inputPlaceholder};
   }
 
   @media screen and (min-width: 768px) {

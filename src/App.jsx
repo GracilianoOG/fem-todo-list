@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import TodoList from "./components/TodoList";
 import TodoContext from "./context/TodoContext";
 import { GlobalStyled } from "./components/styles/GlobalStyled";
+import { ThemeProvider } from "styled-components";
+import { lightTheme } from "./themes";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -71,21 +73,23 @@ const App = () => {
   };
 
   return (
-    <TodoContext.Provider
-      value={{
-        setTodos,
-        addTodo,
-        deleteTodo,
-        completeTodo,
-        getTodos,
-        filter,
-        setFilter,
-      }}
-    >
-      <GlobalStyled />
-      <Header />
-      <TodoList />
-    </TodoContext.Provider>
+    <ThemeProvider theme={lightTheme}>
+      <TodoContext.Provider
+        value={{
+          setTodos,
+          addTodo,
+          deleteTodo,
+          completeTodo,
+          getTodos,
+          filter,
+          setFilter,
+        }}
+      >
+        <GlobalStyled />
+        <Header />
+        <TodoList />
+      </TodoContext.Provider>
+    </ThemeProvider>
   );
 };
 

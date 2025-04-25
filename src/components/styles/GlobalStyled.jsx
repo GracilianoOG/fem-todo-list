@@ -37,8 +37,8 @@ export const GlobalStyled = createGlobalStyle`
 }
 
 body {
-  background-color: var(--color-very-light-gray);
-  color: var(--color-very-dark-grayish-blue);
+  background-color: ${({ theme }) => theme.colors.bodyBgColor};
+  color: ${({ theme }) => theme.colors.bodyColor};
 }
 
 .box {

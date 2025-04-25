@@ -8,13 +8,14 @@ const commonStyles = css`
 `;
 
 const commonSelectedStyles = css`
-  background-image: url("${check}"), var(--color-check-background);
+  background-image: url("${check}"),
+    ${({ theme }) => theme.colors.buttonGradient};
 `;
 
 export const ButtonStyled = styled.button`
   --btn-size: 20px;
   border-radius: 50%;
-  border: 1px solid var(--color-very-light-grayish-blue);
+  border: 1px solid ${({ theme }) => theme.colors.buttonBorder};
   background-color: transparent;
   cursor: pointer;
   height: var(--btn-size);
@@ -22,7 +23,8 @@ export const ButtonStyled = styled.button`
   width: var(--btn-size);
 
   &:hover {
-    background-image: linear-gradient(#fff, #fff), var(--color-check-background);
+    background-image: linear-gradient(#fff, #fff),
+      ${({ theme }) => theme.colors.buttonGradient};
     ${commonStyles}
   }
 

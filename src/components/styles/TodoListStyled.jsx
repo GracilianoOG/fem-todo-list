@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const commonStyles = css`
-  color: var(--color-dark-grayish-blue);
+  color: ${({ theme }) => theme.colors.listText};
   font-size: 12px;
 
   @media screen and (min-width: 768px) {

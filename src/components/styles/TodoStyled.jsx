@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const TodoStyled = styled.li`
-  border-bottom: 1px solid var(--color-very-light-grayish-blue);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.todoBorder};
 `;
 
 export const TodoTextStyled = styled.p`
@@ -11,7 +11,7 @@ export const TodoTextStyled = styled.p`
   ${({ $crossed }) =>
     $crossed &&
     css`
-      color: var(--color-light-grayish-blue);
+      color: ${({ theme }) => theme.colors.todoCrossed};
       text-decoration: line-through;
     `}
 

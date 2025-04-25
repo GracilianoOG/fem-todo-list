@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import bgImageMobile from "../../assets/images/bg-mobile-light.jpg";
-import bgImageDesktop from "../../assets/images/bg-desktop-light.jpg";
 
 export const HeaderStyled = styled.header`
-  background-image: url("${bgImageMobile}");
+  background-image: url("${({ theme }) => theme.images.headerMobile}");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +11,7 @@ export const HeaderStyled = styled.header`
   padding: 16px 0;
 
   @media screen and (min-width: 768px) {
-    background-image: url("${bgImageDesktop}");
+    background-image: url("${({ theme }) => theme.images.headerDesktop}");
     min-height: 300px;
     padding-top: 76px;
   }
@@ -30,7 +28,7 @@ export const HeaderContentStyled = styled.div`
 `;
 
 export const HeaderTitleStyled = styled.h1`
-  color: var(--color-very-light-gray);
+  color: ${({ theme }) => theme.colors.headerTitle};
   font-size: 27px;
   letter-spacing: 10px;
   text-transform: uppercase;

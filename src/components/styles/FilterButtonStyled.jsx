@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const FilterButtonStyled = styled.button`
   border: none;
   background-color: transparent;
-  color: var(--color-dark-grayish-blue);
+  color: ${({ theme }) => theme.colors.filterBtn};
   cursor: pointer;
   font-size: 14px;
   font-weight: 700;
@@ -11,6 +11,6 @@ export const FilterButtonStyled = styled.button`
   ${({ $selected }) =>
     $selected &&
     css`
-      color: var(--color-bright-blue);
+      color: ${({ theme }) => theme.colors.filterBtnSelected};
     `}
 `;

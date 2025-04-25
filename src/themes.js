@@ -13,6 +13,7 @@ const lightTheme = {
     input: "var(--color-very-dark-grayish-blue)",
     inputPlaceholder: "var(--color-dark-grayish-blue)",
     listText: "var(--color-dark-grayish-blue)",
+    listBg: "#fff",
     todoBorder: "var(--color-very-light-grayish-blue)",
     todoCrossed: "var(--color-light-grayish-blue)",
   },

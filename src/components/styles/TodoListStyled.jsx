@@ -11,7 +11,7 @@ const commonStyles = css`
 
 export const TodoListStyled = styled.div`
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.listBg};
   margin: -27px auto 16px;
   z-index: 999;
 

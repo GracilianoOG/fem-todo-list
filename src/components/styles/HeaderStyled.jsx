@@ -23,7 +23,7 @@ export const HeaderContentStyled = styled.div`
   margin-bottom: 30px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 `;
 
@@ -34,7 +34,7 @@ export const HeaderTitleStyled = styled.h1`
   text-transform: uppercase;
 
   @media screen and (min-width: 768px) {
-    font-size: 36px;
-    letter-spacing: 18px;
+    font-size: 39px;
+    letter-spacing: 16px;
   }
 `;

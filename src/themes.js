@@ -40,7 +40,7 @@ const darkTheme = {
     filterBtnHover: "var(--color-light-grayish-blue-hover)",
     filterBtnSelected: "var(--color-bright-blue)",
     headerTitle: "var(--color-very-light-gray)",
-    input: "var(--color-dark-grayish-blue)",
+    input: "var(--color-light-grayish-blue-dark)",
     inputBg: "var(--color-very-dark-desaturated-blue)",
     inputPlaceholder: "var(--color-dark-grayish-blue)",
     listText: "var(--color-dark-grayish-blue)",

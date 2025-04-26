@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TodoEntryStyled = styled.div`
+export const TodoEntryStyled = styled.form`
   background-color: ${({ theme }) => theme.colors.inputBg};
   padding: 14px 20px;
 

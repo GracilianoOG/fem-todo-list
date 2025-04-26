@@ -1,4 +1,3 @@
-import Todo from "./Todo";
 import TodoPanel from "./TodoPanel";
 import { useContext } from "react";
 import TodoContext from "../context/TodoContext";
@@ -8,25 +7,17 @@ import {
   TodoListLeftStyled,
   TodoListStyled,
 } from "./styles/TodoListStyled";
+import Todos from "./Todos";
 
 const TodoList = () => {
-  const { setTodos, getTodos, filter } = useContext(TodoContext);
+  const { setTodos, getTodos } = useContext(TodoContext);
 
   const getTodosLeft = () => getTodos("ACTIVE").length;
   const clearCompleted = () => setTodos(getTodos("ACTIVE"));
 
   return (
     <TodoListStyled className="container round">
-      <ul>
-        {getTodos(filter).map((todo, index) => (
-          <Todo
-            id={todo.id}
-            key={index}
-            task={todo.task}
-            isCompleted={todo.isCompleted}
-          />
-        ))}
-      </ul>
+      <Todos />
       <TodoListFooterStyled>
         <TodoListLeftStyled>{getTodosLeft()} items left</TodoListLeftStyled>
         <TodoPanel />

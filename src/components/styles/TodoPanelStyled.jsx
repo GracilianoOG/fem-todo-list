@@ -14,6 +14,7 @@ export const TodoPanelStyled = styled.div`
 
   @media screen and (min-width: 768px) {
     box-shadow: none;
+    background-color: transparent;
     bottom: initial;
     left: 50%;
     padding: 0;

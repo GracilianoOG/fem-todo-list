@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TodoEntryStyled = styled.div`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.inputBg};
   padding: 14px 20px;
 
   @media screen and (min-width: 768px) {

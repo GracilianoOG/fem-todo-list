@@ -23,7 +23,7 @@ export const ButtonStyled = styled.button`
   width: var(--btn-size);
 
   &:hover {
-    background-image: linear-gradient(#fff, #fff),
+    background-image: ${({ theme }) => theme.colors.buttonBgHover},
       ${({ theme }) => theme.colors.buttonGradient};
     ${commonStyles}
   }

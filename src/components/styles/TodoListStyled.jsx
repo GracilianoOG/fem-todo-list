@@ -26,6 +26,10 @@ export const TodoListFooterStyled = styled.footer`
   justify-content: space-between;
   padding: 16px 20px;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    padding: 16px 24px;
+  }
 `;
 
 export const TodoListLeftStyled = styled.p`

@@ -10,7 +10,8 @@ const TodoEntry = () => {
   const [task, setTask] = useState("");
   const { addTodo } = useContext(TodoContext);
 
-  const handleClick = () => {
+  const handleNewTodo = e => {
+    e.preventDefault();
     const formattedTask = task.trim();
     if (!formattedTask) return;
     addTodo(formattedTask);
@@ -18,8 +19,8 @@ const TodoEntry = () => {
   };
 
   return (
-    <TodoEntryStyled className="box round">
-      <ButtonStyled onClick={handleClick}></ButtonStyled>
+    <TodoEntryStyled className="box round" onSubmit={handleNewTodo}>
+      <ButtonStyled></ButtonStyled>
       <TodoEntryInputStyled
         type="text"
         placeholder="Create a new todo..."

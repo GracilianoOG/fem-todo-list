@@ -5,6 +5,7 @@ import TodoContext from "./context/TodoContext";
 import { GlobalStyled } from "./components/styles/GlobalStyled";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./themes";
+import DarkModeContext from "./context/DarkModeContext";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -87,7 +88,9 @@ const App = () => {
         }}
       >
         <GlobalStyled />
-        <Header isDark={isDark} setIsDark={setIsDark} />
+        <DarkModeContext.Provider value={{ isDark, setIsDark }}>
+          <Header />
+        </DarkModeContext.Provider>
         <TodoList />
       </TodoContext.Provider>
     </ThemeProvider>

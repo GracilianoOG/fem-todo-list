@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import moon from "../assets/icons/icon-moon.svg";
 import sun from "../assets/icons/icon-sun.svg";
 import {
@@ -6,8 +7,11 @@ import {
   HeaderTitleStyled,
 } from "./styles/HeaderStyled";
 import TodoEntry from "./TodoEntry";
+import DarkModeContext from "../context/DarkModeContext";
 
-const Header = ({ isDark, setIsDark }) => {
+const Header = () => {
+  const { isDark, setIsDark } = useContext(DarkModeContext);
+
   return (
     <HeaderStyled>
       <div className="container">

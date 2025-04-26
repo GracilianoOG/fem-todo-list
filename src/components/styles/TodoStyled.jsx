@@ -27,6 +27,10 @@ export const TodoDeleteStyled = styled.button`
   cursor: pointer;
   height: var(--btn-size);
   width: var(--btn-size);
+
+  @media screen and (min-width: 768px) {
+    --btn-size: auto;
+  }
 `;
 
 export const TodoDeleteIconStyled = styled.img`

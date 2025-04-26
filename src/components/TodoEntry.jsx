@@ -11,7 +11,9 @@ const TodoEntry = () => {
   const { addTodo } = useContext(TodoContext);
 
   const handleClick = () => {
-    addTodo(task);
+    const formattedTask = task.trim();
+    if (!formattedTask) return;
+    addTodo(formattedTask);
     setTask("");
   };
 

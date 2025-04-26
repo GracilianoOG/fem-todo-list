@@ -8,6 +8,10 @@ export const FilterButtonStyled = styled.button`
   font-size: 14px;
   font-weight: 700;
 
+  &:hover {
+    color: ${({ theme }) => theme.colors.filterBtnHover};
+  }
+
   ${({ $selected }) =>
     $selected &&
     css`

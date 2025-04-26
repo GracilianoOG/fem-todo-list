@@ -55,16 +55,6 @@ body {
   border-radius: 6px;
 }
 
-.theme-switcher {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.theme-switcher__icon {
-  width: 20px;
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;

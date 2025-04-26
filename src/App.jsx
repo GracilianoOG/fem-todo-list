@@ -6,40 +6,10 @@ import { GlobalStyled } from "./components/styles/GlobalStyled";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./themes";
 import DarkModeContext from "./context/DarkModeContext";
+import { placeholderTodos } from "./placeholderTodos";
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: self.crypto.randomUUID(),
-      task: "Complete online JavaScript course",
-      isCompleted: true,
-    },
-    {
-      id: self.crypto.randomUUID(),
-      task: "Jog around the park 3x",
-      isCompleted: false,
-    },
-    {
-      id: self.crypto.randomUUID(),
-      task: "10 minutes meditation",
-      isCompleted: false,
-    },
-    {
-      id: self.crypto.randomUUID(),
-      task: "Read for 1 hour",
-      isCompleted: false,
-    },
-    {
-      id: self.crypto.randomUUID(),
-      task: "Pick up groceries",
-      isCompleted: false,
-    },
-    {
-      id: self.crypto.randomUUID(),
-      task: "Complete Todo App on Frontend Mentor",
-      isCompleted: false,
-    },
-  ]);
+  const [todos, setTodos] = useState(placeholderTodos);
 
   const [filter, setFilter] = useState("ALL");
   const [isDark, setIsDark] = useState(false);

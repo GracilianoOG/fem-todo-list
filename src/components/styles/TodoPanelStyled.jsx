@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TodoPanelStyled = styled.div`
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  background-color: ${({ theme }) => theme.colors.listBg};
   display: flex;
   align-items: center;
   justify-content: center;

@@ -4,7 +4,7 @@ import TodoList from "./components/TodoList";
 import TodoContext from "./context/TodoContext";
 import { GlobalStyled } from "./components/styles/GlobalStyled";
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "./themes";
+import { darkTheme, lightTheme } from "./themes";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -41,6 +41,7 @@ const App = () => {
   ]);
 
   const [filter, setFilter] = useState("ALL");
+  const [isDark, setIsDark] = useState(false);
 
   const addTodo = task => {
     setTodos([...todos, { id: self.crypto.randomUUID(), task }]);
@@ -73,7 +74,7 @@ const App = () => {
   };
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={!isDark ? lightTheme : darkTheme}>
       <TodoContext.Provider
         value={{
           setTodos,
@@ -86,7 +87,7 @@ const App = () => {
         }}
       >
         <GlobalStyled />
-        <Header />
+        <Header isDark={isDark} setIsDark={setIsDark} />
         <TodoList />
       </TodoContext.Provider>
     </ThemeProvider>

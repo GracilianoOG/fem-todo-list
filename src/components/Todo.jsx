@@ -16,7 +16,7 @@ const Todo = ({ id, task, isCompleted }) => {
   const handleDeleteClick = () => deleteTodo(id);
 
   return (
-    <TodoStyled className="todo box">
+    <TodoStyled className="box">
       <ButtonStyled
         $selected={isCompleted}
         onClick={handleCompleteClick}

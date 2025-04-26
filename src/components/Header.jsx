@@ -1,4 +1,5 @@
 import moon from "../assets/icons/icon-moon.svg";
+import sun from "../assets/icons/icon-sun.svg";
 import {
   HeaderContentStyled,
   HeaderStyled,
@@ -6,14 +7,18 @@ import {
 } from "./styles/HeaderStyled";
 import TodoEntry from "./TodoEntry";
 
-const Header = () => {
+const Header = ({ isDark, setIsDark }) => {
   return (
     <HeaderStyled>
       <div className="container">
         <HeaderContentStyled>
           <HeaderTitleStyled>Todo</HeaderTitleStyled>
-          <button className="theme-switcher">
-            <img className="theme-switcher__icon" src={moon} alt="" />
+          <button className="theme-switcher" onClick={() => setIsDark(!isDark)}>
+            <img
+              className="theme-switcher__icon"
+              src={!isDark ? moon : sun}
+              alt=""
+            />
           </button>
         </HeaderContentStyled>
         <TodoEntry />

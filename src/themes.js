@@ -43,7 +43,7 @@ const darkTheme = {
     input: "var(--color-light-grayish-blue-dark)",
     inputBg: "var(--color-very-dark-desaturated-blue)",
     inputPlaceholder: "var(--color-dark-grayish-blue)",
-    listText: "var(--color-dark-grayish-blue)",
+    listText: "var(--color-very-dark-grayish-blue-dark)",
     listBg: "var(--color-very-dark-desaturated-blue)",
     todoBorder: "var(--color-very-dark-grayish-blue-deep)",
     todoCrossed: "var(--color-very-dark-grayish-blue-dark)",

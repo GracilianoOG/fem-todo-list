@@ -21,7 +21,7 @@ const Todos = () => {
           ))}
         </ul>
       ) : (
-        <NoTodo className="box">No tasks yet, add your first todo!</NoTodo>
+        <NoTodo>No tasks yet, add your first todo!</NoTodo>
       )}
     </>
   );

@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { box } from "../../theme/commonStyles";
 
 export const NoTodo = styled.p`
+  ${box}
   justify-content: center;
   font-size: 16px;
   padding: 22px;

@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { box, round } from "../../theme/commonStyles";
 
 export const TodoPanelStyled = styled.div`
+  ${box}
+  ${round}
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
   background-color: ${({ theme }) => theme.colors.listBg};
   display: flex;

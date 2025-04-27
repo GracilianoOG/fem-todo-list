@@ -19,7 +19,7 @@ const TodoEntry = () => {
   };
 
   return (
-    <TodoEntryStyled className="box round" onSubmit={handleNewTodo}>
+    <TodoEntryStyled onSubmit={handleNewTodo}>
       <ButtonStyled></ButtonStyled>
       <TodoEntryInputStyled
         type="text"

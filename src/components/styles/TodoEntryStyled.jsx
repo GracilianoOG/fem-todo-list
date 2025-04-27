@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { box, round } from "../../theme/commonStyles";
 
 export const TodoEntryStyled = styled.form`
+  ${box}
+  ${round}
   background-color: ${({ theme }) => theme.colors.inputBg};
   padding: 14px 20px;
 

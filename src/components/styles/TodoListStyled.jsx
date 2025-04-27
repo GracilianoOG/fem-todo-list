@@ -41,4 +41,8 @@ export const TodoListLeftStyled = styled.p`
 export const TodoListClearStyled = styled.button`
   min-height: 20px;
   ${commonStyles}
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.filterBtnHover};
+  }
 `;

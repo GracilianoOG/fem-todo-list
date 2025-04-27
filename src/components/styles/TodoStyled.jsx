@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
+import { box } from "../../theme/commonStyles";
 
 export const TodoStyled = styled.li`
+  ${box}
   border-bottom: 1px solid ${({ theme }) => theme.colors.todoBorder};
 `;
 

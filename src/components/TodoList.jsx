@@ -4,7 +4,7 @@ import TodoListFooter from "./TodoListFooter";
 
 const TodoList = () => {
   return (
-    <TodoListStyled className="container round">
+    <TodoListStyled className="container">
       <Todos />
       <TodoListFooter />
     </TodoListStyled>

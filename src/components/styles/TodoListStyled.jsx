@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { round } from "../../theme/commonStyles";
 
 const commonStyles = css`
   color: ${({ theme }) => theme.colors.listText};
@@ -10,6 +11,7 @@ const commonStyles = css`
 `;
 
 export const TodoListStyled = styled.div`
+  ${round}
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
   background-color: ${({ theme }) => theme.colors.listBg};
   margin: -27px auto 16px;

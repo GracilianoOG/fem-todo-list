@@ -45,25 +45,9 @@ body {
   color: ${({ theme }) => theme.colors.bodyColor};
 }
 
-.box {
-  align-items: center;
-  display: flex;
-  padding: 16px 20px;
-}
-
-.round {
-  border-radius: 6px;
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;
   width: min(88%, 540px);
-}
-
-@media screen and (min-width: 768px) {
-  .box {
-    padding: 20px 24px;
-  }
 }
 `;

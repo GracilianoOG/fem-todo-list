@@ -7,6 +7,7 @@ export const TodoStyled = styled.li`
 `;
 
 export const TodoTextStyled = styled.p`
+  cursor: pointer;
   flex: 1;
   font-size: 12px;
 

@@ -21,7 +21,9 @@ const Todo = ({ id, task, isCompleted }) => {
         $selected={isCompleted}
         onClick={handleCompleteClick}
       ></ButtonStyled>
-      <TodoTextStyled $crossed={isCompleted}>{task}</TodoTextStyled>
+      <TodoTextStyled $crossed={isCompleted} onClick={handleCompleteClick}>
+        {task}
+      </TodoTextStyled>
       <TodoDeleteStyled onClick={handleDeleteClick}>
         <TodoDeleteIconStyled src={cross} alt="Delete task" />
       </TodoDeleteStyled>

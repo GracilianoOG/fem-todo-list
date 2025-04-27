@@ -25,9 +25,6 @@ export const TodoTextStyled = styled.p`
 
 export const TodoDeleteStyled = styled.button`
   --btn-size: 12px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
   height: var(--btn-size);
   width: var(--btn-size);
 

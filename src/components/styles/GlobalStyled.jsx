@@ -45,6 +45,12 @@ body {
   color: ${({ theme }) => theme.colors.bodyColor};
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;

@@ -16,8 +16,6 @@ export const ButtonStyled = styled.button`
   --btn-size: 20px;
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.colors.buttonBorder};
-  background-color: transparent;
-  cursor: pointer;
   height: var(--btn-size);
   margin-right: 10px;
   width: var(--btn-size);

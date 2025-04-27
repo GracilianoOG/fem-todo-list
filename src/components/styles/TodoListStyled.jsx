@@ -39,8 +39,6 @@ export const TodoListLeftStyled = styled.p`
 `;
 
 export const TodoListClearStyled = styled.button`
-  border: none;
-  background-color: transparent;
   min-height: 20px;
   ${commonStyles}
 `;

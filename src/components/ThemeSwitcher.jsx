@@ -8,10 +8,10 @@ import {
 } from "./styles/ThemeSwitcherStyled";
 
 const ThemeSwitcher = () => {
-  const { isDark, setIsDark } = useContext(DarkModeContext);
+  const { isDark, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
-    <ThemeSwitcherStyled onClick={() => setIsDark(!isDark)}>
+    <ThemeSwitcherStyled onClick={toggleDarkMode}>
       <ThemeSwitcherIconStyled src={!isDark ? moon : sun} alt="" />
     </ThemeSwitcherStyled>
   );

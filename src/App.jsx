@@ -7,12 +7,12 @@ import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./themes";
 import DarkModeContext from "./context/DarkModeContext";
 import { placeholderTodos } from "./placeholderTodos";
+import { useDarkMode } from "./hooks/useDarkMode";
 
 const App = () => {
   const [todos, setTodos] = useState(placeholderTodos);
-
   const [filter, setFilter] = useState("ALL");
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, toggleDarkMode] = useDarkMode();
 
   const addTodo = task => {
     setTodos([...todos, { id: self.crypto.randomUUID(), task }]);
@@ -58,7 +58,7 @@ const App = () => {
         }}
       >
         <GlobalStyled />
-        <DarkModeContext.Provider value={{ isDark, setIsDark }}>
+        <DarkModeContext.Provider value={{ isDark, toggleDarkMode }}>
           <Header />
         </DarkModeContext.Provider>
         <TodoList />

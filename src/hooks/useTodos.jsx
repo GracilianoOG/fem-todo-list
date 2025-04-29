@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { placeholderTodos } from "../placeholderTodos";
 
 export const useTodos = () => {
-  const [todos, setTodos] = useState(placeholderTodos);
+  const [todos, setTodos] = useState(() => {
+    const localTodos = localStorage.getItem("todos");
+    return localTodos ? JSON.parse(localTodos) : placeholderTodos;
+  });
   const [filter, setFilter] = useState("ALL");
 
   const addTodo = task => {
@@ -34,6 +37,10 @@ export const useTodos = () => {
       })
     );
   };
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return {
     addTodo,

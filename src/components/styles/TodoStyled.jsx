@@ -10,6 +10,7 @@ export const TodoTextStyled = styled.p`
   cursor: pointer;
   flex: 1;
   font-size: 12px;
+  transition: color 0.25s;
 
   ${({ $crossed }) =>
     $crossed &&

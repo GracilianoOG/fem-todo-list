@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import check from "../../assets/icons/icon-check.svg";
 
 const commonStyles = css`
@@ -12,6 +12,10 @@ const commonSelectedStyles = css`
     ${({ theme }) => theme.colors.buttonGradient};
 `;
 
+const spin = keyframes`
+  100% { transform: rotate(360deg); }
+`;
+
 export const ButtonStyled = styled.button`
   --btn-size: 20px;
   border-radius: 50%;
@@ -19,8 +23,10 @@ export const ButtonStyled = styled.button`
   height: var(--btn-size);
   margin-right: 10px;
   width: var(--btn-size);
+  transition: border-color 0.15s;
 
   &:hover {
+    animation: ${spin} 1s infinite linear;
     background-image: ${({ theme }) => theme.colors.buttonBgHover},
       ${({ theme }) => theme.colors.buttonGradient};
     ${commonStyles}
@@ -40,6 +46,7 @@ export const ButtonStyled = styled.button`
       ${commonSelectedStyles}
 
       &:hover {
+        animation: none;
         ${commonSelectedStyles}
       }
     `}

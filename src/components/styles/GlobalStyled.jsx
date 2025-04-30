@@ -40,6 +40,11 @@ export const GlobalStyled = createGlobalStyle`
   font-family: "Josefin Sans", sans-serif;
 }
 
+*:focus-visible {
+  outline: 2px dotted ${({ theme }) => theme.colors.outline};
+  outline-offset: 4px;
+}
+
 body {
   background-color: ${({ theme }) => theme.colors.bodyBgColor};
   color: ${({ theme }) => theme.colors.bodyColor};

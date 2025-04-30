@@ -10,12 +10,14 @@ import TodoContext from "../context/TodoContext";
 const TodoListFooter = () => {
   const { setTodos, getTodos } = useContext(TodoContext);
 
-  const getTodosLeft = () => getTodos("ACTIVE").length;
+  const todosLeft = getTodos("ACTIVE").length;
   const clearCompleted = () => setTodos(getTodos("ACTIVE"));
 
   return (
     <TodoListFooterStyled>
-      <TodoListLeftStyled>{getTodosLeft()} items left</TodoListLeftStyled>
+      <TodoListLeftStyled>
+        {todosLeft ? `${todosLeft} items left` : "All done!"}
+      </TodoListLeftStyled>
       <TodoPanel />
       <TodoListClearStyled onClick={clearCompleted}>
         Clear Completed

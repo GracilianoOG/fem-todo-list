@@ -40,6 +40,7 @@ export const TodoListLeftStyled = styled.p`
 
 export const TodoListClearStyled = styled.button`
   min-height: 20px;
+  transition: color 0.2s;
   ${commonStyles}
 
   &:hover {

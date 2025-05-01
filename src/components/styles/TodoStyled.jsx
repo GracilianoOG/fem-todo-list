@@ -1,11 +1,6 @@
 import styled, { css } from "styled-components";
 import { box } from "../../theme/commonStyles";
 
-export const TodoStyled = styled.li`
-  ${box}
-  border-bottom: 1px solid ${({ theme }) => theme.colors.todoBorder};
-`;
-
 export const TodoTextStyled = styled.p`
   cursor: pointer;
   flex: 1;
@@ -27,10 +22,15 @@ export const TodoTextStyled = styled.p`
 export const TodoDeleteStyled = styled.button`
   --btn-size: 12px;
   height: var(--btn-size);
+  transition: opacity 0.25s;
   width: var(--btn-size);
 
   @media screen and (min-width: 768px) {
     --btn-size: auto;
+  }
+
+  @media screen and (min-width: 992px) {
+    opacity: 0;
   }
 `;
 
@@ -38,4 +38,15 @@ export const TodoDeleteIconStyled = styled.img`
   cursor: pointer;
   display: block;
   width: 100%;
+`;
+
+export const TodoStyled = styled.li`
+  ${box}
+  border-bottom: 1px solid ${({ theme }) => theme.colors.todoBorder};
+
+  @media screen and (min-width: 992px) {
+    &:hover ${TodoDeleteStyled} {
+      opacity: 1;
+    }
+  }
 `;

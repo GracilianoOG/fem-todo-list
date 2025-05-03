@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Todo from "./Todo";
 import TodoContext from "../context/TodoContext";
 import { NoTodo } from "./styles/NoTodoStyled";
@@ -6,6 +6,11 @@ import { NoTodo } from "./styles/NoTodoStyled";
 const Todos = () => {
   const { getTodos, filter } = useContext(TodoContext);
   const todos = getTodos(filter);
+
+  const [dragInfo, setDragInfo] = useState({
+    from: null,
+    to: null,
+  });
 
   return (
     <>
@@ -17,6 +22,9 @@ const Todos = () => {
               key={index}
               task={todo.task}
               isCompleted={todo.isCompleted}
+              position={index}
+              dragInfo={dragInfo}
+              setDragInfo={setDragInfo}
             />
           ))}
         </ul>

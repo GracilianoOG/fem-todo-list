@@ -10,7 +10,7 @@ import {
 } from "./styles/TodoStyled";
 
 const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
-  const { deleteTodo, completeTodo, getTodos, setTodos } =
+  const { deleteTodo, completeTodo, getTodos, setTodos, filter } =
     useContext(TodoContext);
 
   const handleCompleteClick = () => completeTodo(id);
@@ -61,7 +61,7 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
   return (
     <TodoStyled
       data-position={position}
-      draggable={true}
+      draggable={filter === "ALL"}
       onDragStart={handleDragStart}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}

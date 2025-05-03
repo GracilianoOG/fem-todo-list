@@ -44,6 +44,12 @@ export const TodoStyled = styled.li`
   ${box}
   border-bottom: 1px solid ${({ theme }) => theme.colors.todoBorder};
 
+  ${({ $isDragOver }) =>
+    $isDragOver &&
+    css`
+      border: 2px dashed cyan;
+    `}
+
   @media screen and (min-width: 992px) {
     &:hover ${TodoDeleteStyled} {
       opacity: 1;

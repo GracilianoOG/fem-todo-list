@@ -10,7 +10,8 @@ import {
 } from "./styles/TodoStyled";
 
 const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
-  const { deleteTodo, completeTodo } = useContext(TodoContext);
+  const { deleteTodo, completeTodo, getTodos, setTodos } =
+    useContext(TodoContext);
 
   const handleCompleteClick = () => completeTodo(id);
   const handleDeleteClick = () => deleteTodo(id);
@@ -42,6 +43,15 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
 
   const handleDrop = () => {
     console.log(`Dropped ${dragInfo.from} on ${dragInfo.to}`);
+    const draggedTodo = getTodos()[dragInfo.from];
+    const otherTodos = getTodos().filter((_, i) => i !== Number(dragInfo.from));
+    const updatedTodos = [
+      ...otherTodos.slice(0, dragInfo.to),
+      draggedTodo,
+      ...otherTodos.slice(dragInfo.to),
+    ];
+    setTodos(updatedTodos);
+
     setDragInfo({
       ...dragInfo,
       to: null,

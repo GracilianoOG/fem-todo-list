@@ -25,6 +25,10 @@ export const TodoDeleteStyled = styled.button`
   transition: opacity 0.25s;
   width: var(--btn-size);
 
+  &:focus-visible {
+    opacity: 1;
+  }
+
   @media screen and (min-width: 768px) {
     --btn-size: auto;
   }

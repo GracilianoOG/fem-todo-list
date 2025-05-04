@@ -54,7 +54,7 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
   const handleDrop = e => {
     e.stopPropagation();
     console.log(`Dropped ${dragInfo.from} on ${dragInfo.to}`);
-    if (!dragInfo.from) {
+    if (!dragInfo.from || dragInfo.from === dragInfo.to) {
       clearDragInfo();
       return;
     }

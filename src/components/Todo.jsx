@@ -77,6 +77,7 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
+      onDragEnd={clearDragInfo}
       $isDragOver={dragInfo.to && Number(dragInfo.to) === position}
     >
       <ButtonStyled

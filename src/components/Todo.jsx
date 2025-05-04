@@ -35,6 +35,7 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
   const handleDragOver = e => {
     e.preventDefault();
     e.stopPropagation();
+    if (!dragInfo.from) return;
     setDragInfo({
       ...dragInfo,
       to: e.currentTarget.dataset.position,

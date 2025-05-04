@@ -16,6 +16,13 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
   const handleCompleteClick = () => completeTodo(id);
   const handleDeleteClick = () => deleteTodo(id);
 
+  const clearDragInfo = () => {
+    setDragInfo({
+      from: null,
+      to: null,
+    });
+  };
+
   const handleDragStart = e => {
     setDragInfo({
       ...dragInfo,
@@ -43,6 +50,10 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
 
   const handleDrop = () => {
     console.log(`Dropped ${dragInfo.from} on ${dragInfo.to}`);
+    if (!dragInfo.from) {
+      clearDragInfo();
+      return;
+    }
     const draggedTodo = getTodos()[dragInfo.from];
     const otherTodos = getTodos().filter((_, i) => i !== Number(dragInfo.from));
     const updatedTodos = [
@@ -51,11 +62,7 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
       ...otherTodos.slice(dragInfo.to),
     ];
     setTodos(updatedTodos);
-
-    setDragInfo({
-      ...dragInfo,
-      to: null,
-    });
+    clearDragInfo();
   };
 
   return (

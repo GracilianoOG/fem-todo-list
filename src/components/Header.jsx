@@ -3,7 +3,6 @@ import {
   HeaderStyled,
   HeaderTitleStyled,
 } from "./styles/HeaderStyled";
-import TodoEntry from "./TodoEntry";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
@@ -14,7 +13,6 @@ const Header = () => {
           <HeaderTitleStyled>Todo</HeaderTitleStyled>
           <ThemeSwitcher />
         </HeaderContentStyled>
-        <TodoEntry />
       </div>
     </HeaderStyled>
   );

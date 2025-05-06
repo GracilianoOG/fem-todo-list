@@ -7,8 +7,8 @@ export const HeaderStyled = styled.header`
   background-size: cover;
   display: flex;
   flex-direction: column;
-  min-height: 170px;
-  padding: 16px 0;
+  min-height: 200px;
+  padding: 45px 0;
 
   @media screen and (min-width: 768px) {
     background-image: url("${({ theme }) => theme.images.headerDesktop}");

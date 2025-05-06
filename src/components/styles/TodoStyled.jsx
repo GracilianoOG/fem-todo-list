@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { box } from "../../theme/commonStyles";
 
 export const TodoTextStyled = styled.p`
@@ -44,6 +44,11 @@ export const TodoDeleteIconStyled = styled.img`
   width: 100%;
 `;
 
+const showDropArea = keyframes`
+  0% { outline-offset: 5px }
+  100% { outline-offset: 0 }
+`;
+
 export const TodoStyled = styled.li`
   ${box}
   border-bottom: 1px solid ${({ theme }) => theme.colors.todoBorder};
@@ -54,14 +59,19 @@ export const TodoStyled = styled.li`
     css`
       &::before {
         align-items: center;
-        border: 2px dashed cyan;
+        animation: ${showDropArea} 0.6s ease;
         background-color: ${({ theme }) => theme.colors.listBg};
-        content: "Drop here";
+        content: "Drop zone";
         display: flex;
+        font-size: 0.75rem;
+        font-weight: 700;
         height: 100%;
         inset: 0;
         justify-content: center;
+        letter-spacing: 0.2rem;
+        outline: 2px dashed cyan;
         position: absolute;
+        text-transform: uppercase;
         width: 100%;
       }
     `}

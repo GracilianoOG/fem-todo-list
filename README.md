@@ -1,6 +1,6 @@
 # 📒 Todo List App (Frontend Mentor Challenge)
 
-![App preview in different themes](design\desktop-preview.jpg)
+![App preview in different themes](./design/desktop-preview.jpg)
 
 ## 📖 Description
 

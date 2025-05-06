@@ -47,11 +47,23 @@ export const TodoDeleteIconStyled = styled.img`
 export const TodoStyled = styled.li`
   ${box}
   border-bottom: 1px solid ${({ theme }) => theme.colors.todoBorder};
+  position: relative;
 
   ${({ $isDragOver }) =>
     $isDragOver &&
     css`
-      border: 2px dashed cyan;
+      &::before {
+        align-items: center;
+        border: 2px dashed cyan;
+        background-color: ${({ theme }) => theme.colors.listBg};
+        content: "Drop here";
+        display: flex;
+        height: 100%;
+        inset: 0;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+      }
     `}
 
   @media screen and (min-width: 62rem) {

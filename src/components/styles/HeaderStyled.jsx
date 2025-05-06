@@ -18,6 +18,7 @@ export const HeaderStyled = styled.header`
 `;
 
 export const HeaderContentStyled = styled.div`
+  align-items: baseline;
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.875rem;

@@ -11,7 +11,7 @@ export const ThemeSwitcherStyled = styled.button`
   }
 
   @media screen and (min-width: 48rem) {
-    --btn-size: auto;
+    --btn-size: 1.625rem;
   }
 `;
 

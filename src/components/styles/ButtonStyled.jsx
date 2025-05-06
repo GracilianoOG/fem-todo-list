@@ -17,11 +17,11 @@ const spin = keyframes`
 `;
 
 export const ButtonStyled = styled.button`
-  --btn-size: 20px;
+  --btn-size: 1.25rem;
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.colors.buttonBorder};
   height: var(--btn-size);
-  margin-right: 10px;
+  margin-right: 0.625rem;
   width: var(--btn-size);
   transition: border-color 0.15s;
 
@@ -32,9 +32,9 @@ export const ButtonStyled = styled.button`
     ${commonStyles}
   }
 
-  @media screen and (min-width: 768px) {
-    --btn-size: 24px;
-    margin-right: 24px;
+  @media screen and (min-width: 48rem) {
+    --btn-size: 1.5rem;
+    margin-right: 1.5rem;
   }
 
   ${({ $selected }) =>

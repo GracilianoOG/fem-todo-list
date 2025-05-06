@@ -9,13 +9,13 @@ export const TodoPanelStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 1.125rem;
   left: 0;
   position: absolute;
   width: 100%;
-  bottom: -62px;
+  bottom: -3.875rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     box-shadow: none;
     background-color: transparent;
     bottom: initial;

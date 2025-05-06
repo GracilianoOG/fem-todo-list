@@ -59,6 +59,6 @@ button {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: min(88%, 540px);
+  width: min(88%, 33.75rem);
 }
 `;

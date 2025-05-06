@@ -4,7 +4,7 @@ import { box } from "../../theme/commonStyles";
 export const TodoTextStyled = styled.p`
   cursor: pointer;
   flex: 1;
-  font-size: 12px;
+  font-size: 0.75rem;
   transition: color 0.25s;
 
   ${({ $crossed }) =>
@@ -14,13 +14,13 @@ export const TodoTextStyled = styled.p`
       text-decoration: line-through;
     `}
 
-  @media screen and (min-width: 768px) {
-    font-size: 17.6px;
+  @media screen and (min-width: 48rem) {
+    font-size: 1.1rem;
   }
 `;
 
 export const TodoDeleteStyled = styled.button`
-  --btn-size: 12px;
+  --btn-size: 0.75rem;
   height: var(--btn-size);
   transition: opacity 0.25s;
   width: var(--btn-size);
@@ -29,11 +29,11 @@ export const TodoDeleteStyled = styled.button`
     opacity: 1;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     --btn-size: auto;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 62rem) {
     opacity: 0;
   }
 `;
@@ -54,7 +54,7 @@ export const TodoStyled = styled.li`
       border: 2px dashed cyan;
     `}
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 62rem) {
     &:hover ${TodoDeleteStyled} {
       opacity: 1;
     }

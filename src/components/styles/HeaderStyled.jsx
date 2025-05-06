@@ -7,34 +7,34 @@ export const HeaderStyled = styled.header`
   background-size: cover;
   display: flex;
   flex-direction: column;
-  min-height: 200px;
-  padding-top: 45px;
+  min-height: 12.5rem;
+  padding-top: 2.813rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     background-image: url("${({ theme }) => theme.images.headerDesktop}");
-    min-height: 300px;
-    padding-top: 76px;
+    min-height: 18.75rem;
+    padding-top: 4.75rem;
   }
 `;
 
 export const HeaderContentStyled = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 
-  @media screen and (min-width: 768px) {
-    margin-bottom: 36px;
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 2.25rem;
   }
 `;
 
 export const HeaderTitleStyled = styled.h1`
   color: ${({ theme }) => theme.colors.headerTitle};
-  font-size: 27px;
-  letter-spacing: 10px;
+  font-size: 1.688rem;
+  letter-spacing: 0.625rem;
   text-transform: uppercase;
 
-  @media screen and (min-width: 768px) {
-    font-size: 39px;
-    letter-spacing: 16px;
+  @media screen and (min-width: 48rem) {
+    font-size: 2.438rem;
+    letter-spacing: 1rem;
   }
 `;

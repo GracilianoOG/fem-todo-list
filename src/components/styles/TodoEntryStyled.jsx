@@ -5,9 +5,11 @@ export const TodoEntryStyled = styled.form`
   ${box}
   ${round}
   background-color: ${({ theme }) => theme.colors.inputBg};
+  margin-bottom: 16px;
   padding: 14px 20px;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 23px;
     padding: 20px 24px;
   }
 `;

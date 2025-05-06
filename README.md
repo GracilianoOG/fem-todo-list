@@ -1,12 +1,60 @@
-# React + Vite
+# 📒 Todo List App (Frontend Mentor Challenge)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![App preview in different themes](design\desktop-preview.jpg)
 
-Currently, two official plugins are available:
+## 📖 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A sleek and interactive todo list application built as part of the Frontend Mentor challenge. Users can easily create, filter, and delete tasks. Reorder your todos with simple drag-and-drop functionality. Developed using React JS and styled-components for a clean and component-based styling approach.
 
-## Expanding the ESLint configuration
+This project provided a great opportunity to practice with custom hooks and the context API. Creating a drag-and-drop system from scratch was a challenging and enjoyable experience to me, as it was the first time I've interacted with the API.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🗂️ Local install
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/GracilianoOG/fem-todo-list.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run project locally:
+
+```bash
+npm run dev
+```
+
+## 🛠️ Developed with
+
+[![Toolset](https://skillicons.dev/icons?i=react,styledcomponents,js,css,html)](https://skillicons.dev)
+
+- React JS
+- Styled components
+- Custom properties
+
+## ✨ Features
+
+- Responsive to different screen sizes.
+- Add, filter, and delete tasks.
+- Toggle dark and light themes.
+- Save tasks and favorite theme on local storage.
+- Drag and drop tasks to reorder.
+
+## 🔗 Useful links
+
+- [Todo App Challenge](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)
+- [Complete Guide On How To Use Styled-components In React](https://dev.to/elijahtrillionz/complete-guide-on-how-to-use-styled-components-in-react-360c)
+- [Implementing Dark Mode In React Apps Using styled-components](https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/)
+- [Styled Components Crash Course & Project](https://www.youtube.com/watch?v=02zO0hZmwnw)
+- [Creating a Drag and Drop List with React Hooks](https://dev.to/florantara/creating-a-drag-and-drop-list-with-react-hooks-4c0i)
+- [JavaScript Drag and Drop](https://www.javascripttutorial.net/web-apis/javascript-drag-and-drop/)
+- [Common Pitfalls with the HTML5 Drag ‘n’ Drop API](https://medium.com/@reiberdatschi/common-pitfalls-with-html5-drag-n-drop-api-9f011a09ee6c)
+
+## 🧑🏻‍💻 Author
+
+- LinkedIn: [@gabrielgmbarros](https://www.linkedin.com/in/gabrielgmbarros)
+- GitHub: [@GracilianoOG](https://github.com/GracilianoOG)

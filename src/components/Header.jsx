@@ -1,17 +1,11 @@
-import {
-  HeaderContentStyled,
-  HeaderStyled,
-  HeaderTitleStyled,
-} from "./styles/HeaderStyled";
+import { HeaderStyled, HeaderTitleStyled } from "./styles/HeaderStyled";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
   return (
     <HeaderStyled className="container">
-      <HeaderContentStyled>
-        <HeaderTitleStyled>Todo</HeaderTitleStyled>
-        <ThemeSwitcher />
-      </HeaderContentStyled>
+      <HeaderTitleStyled>Todo</HeaderTitleStyled>
+      <ThemeSwitcher />
     </HeaderStyled>
   );
 };

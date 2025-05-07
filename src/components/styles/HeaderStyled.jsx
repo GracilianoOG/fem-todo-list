@@ -1,24 +1,14 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
+  align-items: baseline;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   min-height: var(--header-min-height);
   padding-top: 2.813rem;
 
   @media screen and (min-width: 48rem) {
     padding-top: 4.75rem;
-  }
-`;
-
-export const HeaderContentStyled = styled.div`
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.875rem;
-
-  @media screen and (min-width: 48rem) {
-    margin-bottom: 2.25rem;
   }
 `;
 

@@ -7,12 +7,11 @@ export const HeaderStyled = styled.header`
   background-size: cover;
   display: flex;
   flex-direction: column;
-  min-height: 12.5rem;
+  min-height: var(--header-min-height);
   padding-top: 2.813rem;
 
   @media screen and (min-width: 48rem) {
     background-image: url("${({ theme }) => theme.images.headerDesktop}");
-    min-height: 18.75rem;
     padding-top: 4.75rem;
   }
 `;

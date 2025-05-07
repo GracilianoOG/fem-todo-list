@@ -29,6 +29,9 @@ export const GlobalStyled = createGlobalStyle`
   --color-very-dark-grayish-blue-deep: hsl(237, 14%, 26%);
   --color-btn-background-dark: linear-gradient(var(--color-very-dark-desaturated-blue), 
     var(--color-very-dark-desaturated-blue));
+  
+  /* Measurements */
+  --header-min-height: 12.5rem;
 }
 
 *,
@@ -61,4 +64,10 @@ button {
   margin-right: auto;
   width: min(88%, 33.75rem);
 }
+
+@media screen and (min-width: 48rem) {
+    :root {
+      --header-min-height: 18.75rem;
+    }
+  }
 `;

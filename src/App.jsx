@@ -7,6 +7,7 @@ import { darkTheme, lightTheme } from "./themes";
 import DarkModeContext from "./context/DarkModeContext";
 import { useDarkMode } from "./hooks/useDarkMode";
 import { useTodos } from "./hooks/useTodos";
+import { MainStyled } from "./components/styles/MainStyled";
 
 const App = () => {
   const [isDark, toggleDarkMode] = useDarkMode();
@@ -18,7 +19,9 @@ const App = () => {
         <DarkModeContext.Provider value={{ isDark, toggleDarkMode }}>
           <Header />
         </DarkModeContext.Provider>
-        <TodoList />
+        <MainStyled className="container">
+          <TodoList />
+        </MainStyled>
       </TodoContext.Provider>
     </ThemeProvider>
   );

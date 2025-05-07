@@ -7,13 +7,11 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
   return (
-    <HeaderStyled>
-      <div className="container">
-        <HeaderContentStyled>
-          <HeaderTitleStyled>Todo</HeaderTitleStyled>
-          <ThemeSwitcher />
-        </HeaderContentStyled>
-      </div>
+    <HeaderStyled className="container">
+      <HeaderContentStyled>
+        <HeaderTitleStyled>Todo</HeaderTitleStyled>
+        <ThemeSwitcher />
+      </HeaderContentStyled>
     </HeaderStyled>
   );
 };

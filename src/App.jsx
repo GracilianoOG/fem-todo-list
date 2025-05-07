@@ -20,7 +20,7 @@ const App = () => {
         <DarkModeContext.Provider value={{ isDark, toggleDarkMode }}>
           <Header />
         </DarkModeContext.Provider>
-        <MainStyled className="container">
+        <MainStyled>
           <TodoList />
           <DndInfoStyled>Drag and drop to reorder list</DndInfoStyled>
         </MainStyled>

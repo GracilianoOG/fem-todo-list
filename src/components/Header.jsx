@@ -3,7 +3,7 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
   return (
-    <HeaderStyled className="container">
+    <HeaderStyled>
       <HeaderTitleStyled>Todo</HeaderTitleStyled>
       <ThemeSwitcher />
     </HeaderStyled>

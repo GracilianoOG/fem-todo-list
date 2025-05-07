@@ -22,6 +22,7 @@ const lightTheme = {
     listBg: "#fff",
     todoBorder: "var(--color-very-light-grayish-blue)",
     todoCrossed: "var(--color-light-grayish-blue)",
+    footerLink: "#004bbf",
   },
   images: {
     headerMobile: bgImageMobileLight,
@@ -49,6 +50,7 @@ const darkTheme = {
     listBg: "var(--color-very-dark-desaturated-blue)",
     todoBorder: "var(--color-very-dark-grayish-blue-deep)",
     todoCrossed: "var(--color-very-dark-grayish-blue-dark)",
+    footerLink: "#ff1b1b",
   },
   images: {
     headerMobile: bgImageMobileDark,

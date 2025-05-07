@@ -21,7 +21,7 @@ export const ButtonStyled = styled.button`
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.colors.buttonBorder};
   height: var(--btn-size);
-  margin-right: 0.625rem;
+  margin-right: var(--todo-gap);
   width: var(--btn-size);
   transition: border-color 0.15s;
 
@@ -34,7 +34,6 @@ export const ButtonStyled = styled.button`
 
   @media screen and (min-width: 48rem) {
     --btn-size: 1.5rem;
-    margin-right: 1.5rem;
   }
 
   ${({ $selected }) =>

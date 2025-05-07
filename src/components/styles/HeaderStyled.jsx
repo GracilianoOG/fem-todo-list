@@ -1,17 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-  background-image: url("${({ theme }) => theme.images.headerMobile}");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   min-height: var(--header-min-height);
   padding-top: 2.813rem;
 
   @media screen and (min-width: 48rem) {
-    background-image: url("${({ theme }) => theme.images.headerDesktop}");
     padding-top: 4.75rem;
   }
 `;

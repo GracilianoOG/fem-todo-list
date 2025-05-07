@@ -51,6 +51,20 @@ export const GlobalStyled = createGlobalStyle`
 body {
   background-color: ${({ theme }) => theme.colors.bodyBgColor};
   color: ${({ theme }) => theme.colors.bodyColor};
+
+  &::before {
+    background-image: url("${({ theme }) => theme.images.headerMobile}");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: var(--header-min-height);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
 
 button {
@@ -66,8 +80,12 @@ button {
 }
 
 @media screen and (min-width: 48rem) {
-    :root {
-      --header-min-height: 18.75rem;
-    }
+  body::before {
+    background-image: url("${({ theme }) => theme.images.headerDesktop}");
   }
+
+  :root {
+    --header-min-height: 18.75rem;
+  }
+}
 `;

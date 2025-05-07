@@ -49,8 +49,11 @@ export const GlobalStyled = createGlobalStyle`
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  min-height: 100vh;
   width: min(88%, 33.75rem);
 }
 

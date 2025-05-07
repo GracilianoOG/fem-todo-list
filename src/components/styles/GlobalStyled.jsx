@@ -32,6 +32,7 @@ export const GlobalStyled = createGlobalStyle`
   
   /* Measurements */
   --header-min-height: 12.5rem;
+  --todo-gap: 0.625rem;
 }
 
 *,
@@ -89,6 +90,7 @@ button {
 
   :root {
     --header-min-height: 18.75rem;
+    --todo-gap: 1.5rem;
   }
 }
 `;

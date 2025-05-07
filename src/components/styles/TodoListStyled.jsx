@@ -14,7 +14,11 @@ export const TodoListStyled = styled.div`
   ${round}
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
   background-color: ${({ theme }) => theme.colors.listBg};
-  margin: 0 auto 1rem;
+  margin: 0 auto 6.438rem;
+
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 2.875rem;
+  }
 `;
 
 export const TodoListFooterStyled = styled.footer`

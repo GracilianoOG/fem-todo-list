@@ -1,7 +1,7 @@
-import bgImageMobileLight from "./assets/images/bg-mobile-light.jpg";
-import bgImageDesktopLight from "./assets/images/bg-desktop-light.jpg";
-import bgImageMobileDark from "./assets/images/bg-mobile-dark.jpg";
-import bgImageDesktopDark from "./assets/images/bg-desktop-dark.jpg";
+import bgImageMobileLight from "../assets/images/bg-mobile-light.jpg";
+import bgImageDesktopLight from "../assets/images/bg-desktop-light.jpg";
+import bgImageMobileDark from "../assets/images/bg-mobile-dark.jpg";
+import bgImageDesktopDark from "../assets/images/bg-desktop-dark.jpg";
 
 const lightTheme = {
   colors: {

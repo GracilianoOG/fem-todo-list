@@ -3,7 +3,7 @@ import TodoList from "./components/TodoList";
 import TodoContext from "./context/TodoContext";
 import { GlobalStyled } from "./components/styles/GlobalStyled";
 import { ThemeProvider } from "styled-components";
-import { darkTheme, lightTheme } from "./themes";
+import { darkTheme, lightTheme } from "./theme/themes";
 import DarkModeContext from "./context/DarkModeContext";
 import { useDarkMode } from "./hooks/useDarkMode";
 import { useTodos } from "./hooks/useTodos";

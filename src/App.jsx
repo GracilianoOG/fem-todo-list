@@ -8,6 +8,7 @@ import DarkModeContext from "./context/DarkModeContext";
 import { useDarkMode } from "./hooks/useDarkMode";
 import { useTodos } from "./hooks/useTodos";
 import { MainStyled } from "./components/styles/MainStyled";
+import { DndInfoStyled } from "./components/styles/DndInfoStyled";
 
 const App = () => {
   const [isDark, toggleDarkMode] = useDarkMode();
@@ -21,6 +22,7 @@ const App = () => {
         </DarkModeContext.Provider>
         <MainStyled className="container">
           <TodoList />
+          <DndInfoStyled>Drag and drop to reorder list</DndInfoStyled>
         </MainStyled>
       </TodoContext.Provider>
     </ThemeProvider>

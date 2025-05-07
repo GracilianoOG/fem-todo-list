@@ -5,6 +5,7 @@ export const TodoTextStyled = styled.p`
   cursor: pointer;
   flex: 1;
   font-size: 0.75rem;
+  margin-right: var(--todo-gap);
   transition: color 0.25s;
   text-align: justify;
   word-break: break-word;

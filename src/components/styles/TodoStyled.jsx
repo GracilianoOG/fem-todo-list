@@ -6,6 +6,7 @@ export const TodoTextStyled = styled.p`
   flex: 1;
   font-size: 0.75rem;
   transition: color 0.25s;
+  text-align: justify;
   word-break: break-word;
 
   ${({ $crossed }) =>

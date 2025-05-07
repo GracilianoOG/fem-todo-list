@@ -9,6 +9,7 @@ import { ButtonStyled } from "./styles/ButtonStyled";
 const TodoEntry = () => {
   const [task, setTask] = useState("");
   const { addTodo } = useContext(TodoContext);
+  const MAX_LENGTH = 200;
 
   const handleNewTodo = e => {
     e.preventDefault();
@@ -18,6 +19,12 @@ const TodoEntry = () => {
     setTask("");
   };
 
+  const handleChange = e => {
+    const task = e.target.value;
+    if (task.length > MAX_LENGTH) return;
+    setTask(task);
+  };
+
   return (
     <TodoEntryStyled onSubmit={handleNewTodo}>
       <ButtonStyled></ButtonStyled>
@@ -25,7 +32,8 @@ const TodoEntry = () => {
         type="text"
         placeholder="Create a new todo..."
         value={task}
-        onChange={e => setTask(e.target.value)}
+        maxLength={MAX_LENGTH}
+        onChange={handleChange}
       />
     </TodoEntryStyled>
   );

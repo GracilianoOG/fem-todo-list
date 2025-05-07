@@ -48,6 +48,12 @@ export const GlobalStyled = createGlobalStyle`
   outline-offset: 4px;
 }
 
+#root {
+  margin-left: auto;
+  margin-right: auto;
+  width: min(88%, 33.75rem);
+}
+
 body {
   background-color: ${({ theme }) => theme.colors.bodyBgColor};
   color: ${({ theme }) => theme.colors.bodyColor};
@@ -71,12 +77,6 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: min(88%, 33.75rem);
 }
 
 @media screen and (min-width: 48rem) {

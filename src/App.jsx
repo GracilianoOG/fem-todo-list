@@ -16,17 +16,17 @@ const App = () => {
 
   return (
     <ThemeProvider theme={!isDark ? lightTheme : darkTheme}>
-      <TodoContext.Provider value={{ ...useTodos() }}>
-        <GlobalStyled />
-        <DarkModeContext.Provider value={{ isDark, toggleDarkMode }}>
-          <Header />
-        </DarkModeContext.Provider>
-        <MainStyled>
+      <GlobalStyled />
+      <DarkModeContext.Provider value={{ isDark, toggleDarkMode }}>
+        <Header />
+      </DarkModeContext.Provider>
+      <MainStyled>
+        <TodoContext.Provider value={{ ...useTodos() }}>
           <TodoList />
-          <DndInfoStyled>Drag and drop to reorder list</DndInfoStyled>
-        </MainStyled>
-        <Footer />
-      </TodoContext.Provider>
+        </TodoContext.Provider>
+        <DndInfoStyled>Drag and drop to reorder list</DndInfoStyled>
+      </MainStyled>
+      <Footer />
     </ThemeProvider>
   );
 };

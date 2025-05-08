@@ -25,6 +25,7 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
 
   const handleDragStart = e => {
     e.stopPropagation();
+    e.dataTransfer.setData("text/plain", "dummy");
     setDragInfo({
       ...dragInfo,
       from: e.target.dataset.position,

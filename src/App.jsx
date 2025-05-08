@@ -1,15 +1,14 @@
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
-import TodoContext from "./context/TodoContext";
 import { GlobalStyled } from "./components/styles/GlobalStyled";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./theme/themes";
 import DarkModeContext from "./context/DarkModeContext";
 import { useDarkMode } from "./hooks/useDarkMode";
-import { useTodos } from "./hooks/useTodos";
 import { MainStyled } from "./components/styles/MainStyled";
 import { DndInfoStyled } from "./components/styles/DndInfoStyled";
 import Footer from "./components/Footer";
+import TodoProvider from "./providers/TodoProvider";
 
 const App = () => {
   const [isDark, toggleDarkMode] = useDarkMode();
@@ -21,9 +20,9 @@ const App = () => {
         <Header />
       </DarkModeContext.Provider>
       <MainStyled>
-        <TodoContext.Provider value={{ ...useTodos() }}>
+        <TodoProvider>
           <TodoList />
-        </TodoContext.Provider>
+        </TodoProvider>
         <DndInfoStyled>Drag and drop to reorder list</DndInfoStyled>
       </MainStyled>
       <Footer />

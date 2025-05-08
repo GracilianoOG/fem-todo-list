@@ -30,7 +30,6 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
       ...dragInfo,
       from: e.target.dataset.position,
     });
-    console.log("dragging from " + dragInfo.from);
   };
 
   const handleDragOver = e => {
@@ -41,12 +40,10 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
       ...dragInfo,
       to: e.currentTarget.dataset.position,
     });
-    console.log("Dragging to " + dragInfo.to);
   };
 
   const handleDragLeave = e => {
     e.stopPropagation();
-    console.log("Leave " + dragInfo.to);
     setDragInfo({
       ...dragInfo,
       to: null,
@@ -55,7 +52,6 @@ const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
 
   const handleDrop = e => {
     e.stopPropagation();
-    console.log(`Dropped ${dragInfo.from} on ${dragInfo.to}`);
     if (!dragInfo.from || dragInfo.from === dragInfo.to) {
       clearDragInfo();
       return;

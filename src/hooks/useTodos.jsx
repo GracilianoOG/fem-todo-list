@@ -9,7 +9,10 @@ export const useTodos = () => {
   const [filter, setFilter] = useState("ALL");
 
   const addTodo = task => {
-    setTodos([...todos, { id: self.crypto.randomUUID(), task }]);
+    setTodos([
+      ...todos,
+      { id: self.crypto.randomUUID(), task, isCompleted: false },
+    ]);
   };
 
   const deleteTodo = id => {

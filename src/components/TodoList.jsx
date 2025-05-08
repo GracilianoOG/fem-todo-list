@@ -2,20 +2,17 @@ import { TodoListStyled } from "./styles/TodoListStyled";
 import Todos from "./Todos";
 import TodoListFooter from "./TodoListFooter";
 import TodoEntry from "./TodoEntry";
-import FilterContext from "../context/FilterContext";
-import { useState } from "react";
+import FilterProvider from "../providers/FilterProvider";
 
 const TodoList = () => {
-  const [filter, setFilter] = useState("ALL");
-
   return (
     <>
       <TodoEntry />
       <TodoListStyled>
-        <FilterContext.Provider value={{ filter, setFilter }}>
+        <FilterProvider>
           <Todos />
           <TodoListFooter />
-        </FilterContext.Provider>
+        </FilterProvider>
       </TodoListStyled>
     </>
   );

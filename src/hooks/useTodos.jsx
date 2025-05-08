@@ -6,7 +6,6 @@ export const useTodos = () => {
     const localTodos = localStorage.getItem("todos");
     return localTodos ? JSON.parse(localTodos) : placeholderTodos;
   });
-  const [filter, setFilter] = useState("ALL");
 
   const addTodo = task => {
     setTodos([
@@ -51,7 +50,5 @@ export const useTodos = () => {
     completeTodo,
     getTodos,
     setTodos,
-    filter,
-    setFilter,
   };
 };

@@ -3,9 +3,11 @@ import Todo from "./Todo";
 import TodoContext from "../context/TodoContext";
 import { NoTodo } from "./styles/NoTodoStyled";
 import { useDnd } from "../hooks/useDnd";
+import FilterContext from "../context/FilterContext";
 
 const Todos = () => {
-  const { getTodos, filter } = useContext(TodoContext);
+  const { getTodos } = useContext(TodoContext);
+  const { filter } = useContext(FilterContext);
   const [dragInfo, handlers] = useDnd();
   const todos = getTodos(filter);
 

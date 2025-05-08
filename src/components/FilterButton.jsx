@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import TodoContext from "../context/TodoContext";
 import { FilterButtonStyled } from "./styles/FilterButtonStyled";
+import FilterContext from "../context/FilterContext";
 
 const FilterButton = ({ filterName, text }) => {
-  const { filter, setFilter } = useContext(TodoContext);
+  const { filter, setFilter } = useContext(FilterContext);
 
   return (
     <FilterButtonStyled

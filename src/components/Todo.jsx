@@ -9,63 +9,18 @@ import {
   TodoTextStyled,
 } from "./styles/TodoStyled";
 
-const Todo = ({ id, task, isCompleted, position, dragInfo, setDragInfo }) => {
-  const { deleteTodo, completeTodo, getTodos, setTodos, filter } =
-    useContext(TodoContext);
+const Todo = ({ id, task, isCompleted, position, dragInfo, handlers }) => {
+  const { deleteTodo, completeTodo, filter } = useContext(TodoContext);
+  const {
+    handleDragStart,
+    handleDragOver,
+    handleDragLeave,
+    handleDrop,
+    clearDragInfo,
+  } = handlers;
 
   const handleCompleteClick = () => completeTodo(id);
   const handleDeleteClick = () => deleteTodo(id);
-
-  const clearDragInfo = () => {
-    setDragInfo({
-      from: null,
-      to: null,
-    });
-  };
-
-  const handleDragStart = e => {
-    e.stopPropagation();
-    e.dataTransfer.setData("text/plain", "dummy");
-    setDragInfo({
-      ...dragInfo,
-      from: e.target.dataset.position,
-    });
-  };
-
-  const handleDragOver = e => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!dragInfo.from) return;
-    setDragInfo({
-      ...dragInfo,
-      to: e.currentTarget.dataset.position,
-    });
-  };
-
-  const handleDragLeave = e => {
-    e.stopPropagation();
-    setDragInfo({
-      ...dragInfo,
-      to: null,
-    });
-  };
-
-  const handleDrop = e => {
-    e.stopPropagation();
-    if (!dragInfo.from || dragInfo.from === dragInfo.to) {
-      clearDragInfo();
-      return;
-    }
-    const draggedTodo = getTodos()[dragInfo.from];
-    const otherTodos = getTodos().filter((_, i) => i !== Number(dragInfo.from));
-    const updatedTodos = [
-      ...otherTodos.slice(0, dragInfo.to),
-      draggedTodo,
-      ...otherTodos.slice(dragInfo.to),
-    ];
-    setTodos(updatedTodos);
-    clearDragInfo();
-  };
 
   return (
     <TodoStyled

@@ -1,16 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Todo from "./Todo";
 import TodoContext from "../context/TodoContext";
 import { NoTodo } from "./styles/NoTodoStyled";
+import { useDnd } from "../hooks/useDnd";
 
 const Todos = () => {
   const { getTodos, filter } = useContext(TodoContext);
+  const [dragInfo, handlers] = useDnd();
   const todos = getTodos(filter);
-
-  const [dragInfo, setDragInfo] = useState({
-    from: null,
-    to: null,
-  });
 
   return (
     <>
@@ -24,7 +21,7 @@ const Todos = () => {
               isCompleted={todo.isCompleted}
               position={index}
               dragInfo={dragInfo}
-              setDragInfo={setDragInfo}
+              handlers={handlers}
             />
           ))}
         </ul>

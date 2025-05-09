@@ -53,6 +53,10 @@ npm run dev
 - [Creating a Drag and Drop List with React Hooks](https://dev.to/florantara/creating-a-drag-and-drop-list-with-react-hooks-4c0i)
 - [JavaScript Drag and Drop](https://www.javascripttutorial.net/web-apis/javascript-drag-and-drop/)
 - [Common Pitfalls with the HTML5 Drag ‘n’ Drop API](https://medium.com/@reiberdatschi/common-pitfalls-with-html5-drag-n-drop-api-9f011a09ee6c)
+- [10x Your React App Performance: Optimization Techniques That Actually Work](https://shahmirprogrammer.medium.com/10x-your-react-app-performance-optimization-techniques-that-actually-work-3123df3877ac)
+- [Fixing Re-Renders When Using Context in React](https://kattya.dev/articles/2021-04-17-fixing-re-renders-when-using-context-in-react/)
+- [useMemo](https://react.dev/reference/react/useMemo)
+- [memo](https://react.dev/reference/react/memo)
 
 ## 🧑🏻‍💻 Author
 

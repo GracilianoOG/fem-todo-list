@@ -8,9 +8,11 @@ import {
   TodoStyled,
   TodoTextStyled,
 } from "./styles/TodoStyled";
+import FilterContext from "../context/FilterContext";
 
 const Todo = ({ id, task, isCompleted, position, dragInfo, handlers }) => {
-  const { deleteTodo, completeTodo, filter } = useContext(TodoContext);
+  const { deleteTodo, completeTodo } = useContext(TodoContext);
+  const { filter } = useContext(FilterContext);
   const {
     handleDragStart,
     handleDragOver,

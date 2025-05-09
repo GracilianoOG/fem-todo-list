@@ -11,7 +11,7 @@ const TodoEntry = () => {
   const { addTodo } = useContext(TodoContext);
   const MAX_LENGTH = 200;
 
-  const handleNewTodo = e => {
+  const handleSubmit = e => {
     e.preventDefault();
     const formattedTask = task.trim();
     if (!formattedTask) return;
@@ -26,8 +26,8 @@ const TodoEntry = () => {
   };
 
   return (
-    <TodoEntryStyled onSubmit={handleNewTodo}>
-      <ButtonStyled></ButtonStyled>
+    <TodoEntryStyled onSubmit={handleSubmit}>
+      <ButtonStyled />
       <TodoEntryInputStyled
         type="text"
         placeholder="Create a new todo..."

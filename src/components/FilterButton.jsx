@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FilterButtonStyled } from "./styles/FilterButtonStyled";
 import FilterContext from "../context/FilterContext";
 
-const FilterButton = ({ filterName, text }) => {
+const FilterButton = ({ filterName }) => {
   const { filter, setFilter } = useContext(FilterContext);
 
   return (
@@ -10,7 +10,7 @@ const FilterButton = ({ filterName, text }) => {
       $selected={filter === filterName}
       onClick={() => setFilter(filterName)}
     >
-      {text}
+      {filterName.toLowerCase()}
     </FilterButtonStyled>
   );
 };

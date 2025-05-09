@@ -10,6 +10,7 @@ export const GlobalStyled = createGlobalStyle`
     hsl(280, 87%, 65%)
   );
   --color-white: #fff;
+  --color-black: #000;
 
   /* Neutral Colors - Light Theme */
   --color-very-light-gray: hsl(0, 0%, 98%);
@@ -18,6 +19,7 @@ export const GlobalStyled = createGlobalStyle`
   --color-dark-grayish-blue: hsl(236, 9%, 61%);
   --color-very-dark-grayish-blue: hsl(235, 19%, 35%);
   --color-btn-background: linear-gradient(var(--color-white), var(--color-white));
+  --color-dark-blue: hsl(216, 100%, 37.50%);
 
   /* Neutral Colors - Dark Theme */
   --color-very-dark-blue: hsl(235, 21%, 11%);
@@ -29,6 +31,7 @@ export const GlobalStyled = createGlobalStyle`
   --color-very-dark-grayish-blue-deep: hsl(237, 14%, 26%);
   --color-btn-background-dark: linear-gradient(var(--color-very-dark-desaturated-blue), 
     var(--color-very-dark-desaturated-blue));
+  --color-red: hsl(0, 100%, 55.30%);
   
   /* Measurements */
   --header-min-height: 12.5rem;

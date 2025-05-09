@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { FilterButtonStyled } from "./styles/FilterButtonStyled";
 import FilterContext from "../context/FilterContext";
 
-const FilterButton = ({ filterName }) => {
+const FilterButton = memo(({ filterName }) => {
   const { filter, setFilter } = useContext(FilterContext);
 
   return (
@@ -13,6 +13,6 @@ const FilterButton = ({ filterName }) => {
       {filterName.toLowerCase()}
     </FilterButtonStyled>
   );
-};
+});
 
 export default FilterButton;

@@ -4,9 +4,9 @@ import { TodoPanelStyled } from "./styles/TodoPanelStyled";
 const TodoPanel = () => {
   return (
     <TodoPanelStyled>
-      <FilterButton filterName="ALL" text="All" />
-      <FilterButton filterName="ACTIVE" text="Active" />
-      <FilterButton filterName="COMPLETED" text="Completed" />
+      <FilterButton filterName="ALL" />
+      <FilterButton filterName="ACTIVE" />
+      <FilterButton filterName="COMPLETED" />
     </TodoPanelStyled>
   );
 };

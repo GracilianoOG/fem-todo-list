@@ -8,14 +8,14 @@ export const useTodos = () => {
   });
 
   const addTodo = task => {
-    setTodos([
-      ...todos,
+    setTodos(prevTodos => [
+      ...prevTodos,
       { id: self.crypto.randomUUID(), task, isCompleted: false },
     ]);
   };
 
   const deleteTodo = id => {
-    setTodos(todos.filter(todo => todo.id !== id));
+    setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id));
   };
 
   const getTodos = (status = "ALL") => {
@@ -29,12 +29,9 @@ export const useTodos = () => {
   };
 
   const completeTodo = id => {
-    setTodos(
-      todos.map(todo => {
-        if (todo.id === id) {
-          todo.isCompleted = !todo.isCompleted;
-          return todo;
-        }
+    setTodos(prevTodos =>
+      prevTodos.map(todo => {
+        if (todo.id === id) return { ...todo, isCompleted: !todo.isCompleted };
         return todo;
       })
     );
